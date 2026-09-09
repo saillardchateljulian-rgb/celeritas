@@ -29,7 +29,7 @@
    "Mail, formulaire, appel manqué. Qualifié, orienté, répondu dans la minute.",
   "Chased at the right moment. And it tells you which ones need a call instead.":
    "Relancés au bon moment. Et il vous dit lesquels méritent un appel plutôt qu'un mail.",
-  "Written and filed before the next call starts. Nothing stays in someone's head.":
+  "Written and filed before the next call starts. It stops living in someone's head.":
    "Écrits et classés avant l'appel suivant. Plus rien ne reste dans la tête de quelqu'un.",
   "Double entry":"Double saisie",
   "Typed once. The quote, the sheet and the accounts fill themselves in.":
@@ -82,6 +82,11 @@
    "Une demi-journée en visio avec les gens qui font le travail. La liste chiffrée sous une semaine, déduite ensuite.",
   "Monthly, optional, cancel at any time.":"Au mois, optionnel, résiliable à tout moment.",
   "Running now":"En cours d'exécution",
+  "Email, web form, missed call. Qualified, routed, answered within the minute instead of the next morning.":
+   "Mail, formulaire, appel manqué. Qualifié, orienté, répondu dans la minute au lieu du lendemain.",
+  "The two or three absurd tasks only your company has. It is custom built, so those go in too.":
+   "Les deux ou trois tâches absurdes que seule votre entreprise a. C'est du sur mesure, donc elles rentrent aussi.",
+  "0 handled today":"0 traité aujourd'hui",
   /* déroulé */
   "Three weeks":"Trois semaines","from the first call to something running.":"entre le premier appel et un système qui tourne.",
   "Here is exactly what happens.":"Voici exactement ce qui se passe.",
@@ -103,7 +108,7 @@
   "The knowledge leaves with them":"Le savoir part avec la personne","The knowledge stays in the tool":"Le savoir reste dans l'outil",
   /* branchement */
   "How it plugs in":"Comment ça se branche","It":"Il","plugs into":"se branche sur",
-  "what you already use.":"ce que vous avez déjà.","Nothing to replace.":"Rien à remplacer.",
+  "what you already use.":"ce que vous avez déjà.","No migration.":"Aucune migration.",
   "There is no Celeritas product we install. It reads your inbox, your quoting software and your sheets where they already are, and writes back into them.":
    "Il n'y a pas de logiciel Celeritas qu'on vous installe. Il lit votre boîte mail, votre logiciel de devis et vos tableurs là où ils sont, et il réécrit dedans.",
   "Inbox":"Boîte mail","Quotes":"Devis","Sheets":"Tableurs","Phone":"Téléphone","CRM":"CRM","Accounts":"Compta",
@@ -145,7 +150,7 @@
   "Nothing reaches a client without your approval, until you decide otherwise after watching the drafts for a few weeks. The model writes, you keep control. And for everything that does not need writing, we use plain automation, which costs less and does not get it wrong.":
    "Rien ne part à un client sans votre validation, tant que vous n'en décidez pas autrement après avoir vu les brouillons pendant quelques semaines. Le modèle rédige, vous gardez la main. Et pour tout ce qui n'a pas besoin d'être rédigé, on utilise de l'automatisation classique, qui coûte moins cher et ne se trompe pas.",
   "We already have software. We are not replacing everything.":"On a déjà des logiciels. On ne va pas tout changer.",
-  "There is nothing to replace. The assistant plugs into what you already use, your quoting software, your inbox, your spreadsheets. It fills the gaps your tools leave rather than competing with them.":
+  "There is no migration. The assistant plugs into what you already use, your quoting software, your inbox, your spreadsheets. It fills the gaps your tools leave rather than competing with them.":
    "Il n'y a rien à changer. L'assistant se branche sur ce que vous utilisez déjà, votre logiciel de devis, votre boîte mail, vos tableurs. Il comble ce que vos outils ne font pas au lieu de leur faire concurrence.",
   "Where does our data go?":"Où vont nos données ?",
   "It stays in your tools and your accounts. If something has to leave your systems, we tell you what, to which provider and why, before it is set up.":

@@ -184,7 +184,7 @@ mn.addEventListener('click',e=>{if(e.target.tagName==='A'){mn.classList.remove('
    if(RM){cnt.textContent=target;return}
    const t0=performance.now();
    (function s(n){const k=clamp((n-t0)/900,0,1);cnt.textContent=Math.round(target*(1-Math.pow(1-k,3)));
-    if(k<1)requestAnimationFrame(s);else setInterval(()=>{v++;cnt.textContent=target+v},14000)})(t0);
+    if(k<1)requestAnimationFrame(s);else setInterval(()=>{if(document.hidden)return;v++;cnt.textContent=target+v},14000)})(t0);
   }),{threshold:.5});io.observe(cnt);}
 
  /* les titres de section se révèlent mot par mot */
