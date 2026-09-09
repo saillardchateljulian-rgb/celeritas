@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@400;500;600&display=swap">
+  <style>
+    body{margin:0;background:#fff;font-family:Inter,system-ui,sans-serif;color:#0F1115;-webkit-font-smoothing:antialiased}
+    a{color:#2563EB}a:hover{color:#1D4ED8}
+    .eb{font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#8A909B}
+    .h1{font-family:'Inter Tight',Inter,sans-serif;font-weight:500;letter-spacing:-.045em;line-height:1.04;font-size:54px;margin:18px 0 0}
+    .h2{font-family:'Inter Tight',Inter,sans-serif;font-weight:500;letter-spacing:-.04em;line-height:1.14;font-size:34px;margin:14px 0 0}
+    .bl{color:#2563EB}.gy{color:#5B6270}
+    .p{color:#5B6270;font-size:16px;line-height:1.6;margin:16px 0 0}
+    .cap{color:#8A909B;font-size:13px;margin:0}
+    .btn{display:inline-flex;align-items:center;gap:8px;background:#0F1115;color:#fff;border-radius:999px;padding:13px 24px;font-size:15px;font-weight:500}
+    .btn2{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#0F1115;border-radius:999px;padding:13px 24px;font-size:15px;font-weight:500;box-shadow:inset 0 0 0 1px #EBECEF}
+    .win{border:1px solid #EBECEF;border-radius:14px;overflow:hidden;background:#fff}
+    .wbar{padding:12px 16px;border-bottom:1px solid #F2F3F5;font-size:12.5px;color:#8A909B;display:flex;justify-content:space-between}
+    .row{display:grid;grid-template-columns:1fr auto;gap:3px 12px;padding:13px 16px;border-bottom:1px solid #F2F3F5}
+    .row b{font-size:14.5px;font-weight:500}
+    .row i{font-style:normal;font-size:12.5px;color:#8A909B}
+    .row s{grid-column:2;justify-self:end;text-decoration:none;font-size:11.5px;font-weight:600;color:#0F9960}
+    .row s.you{color:#2563EB}
+    .tabs{display:flex;gap:22px;font-size:14px;color:#8A909B;margin-bottom:20px}
+    .tabs b{color:#0F1115;font-weight:500;border-bottom:1px solid #0F1115;padding-bottom:6px}
+  </style>
+</helmet>
+<div style="padding:44px 48px">
+ <div class="eb">Comment ça se branche</div>
+ <p class="h2" style="max-width:26ch">Le flux se <span class="bl">construit tout seul</span>, puis il s'exécute.</p>
+ <div style="margin-top:34px;border:1px solid #EBECEF;border-radius:14px;height:280px;position:relative;background-image:radial-gradient(#EBECEF 1px,transparent 1px);background-size:22px 22px">
+  <svg viewBox="0 0 780 280" style="position:absolute;inset:0;width:100%;height:100%" fill="none" stroke="#2563EB" stroke-width="1.8">
+   <path d="M150 140 C 210 140, 210 72, 285 72"/><path d="M150 140 C 210 140, 210 208, 285 208"/>
+   <path d="M455 72 C 520 72, 520 140, 570 140"/><path d="M455 208 C 520 208, 520 140, 570 140"/>
+  </svg>
+  <div style="position:absolute;left:60px;top:140px;transform:translate(-50%,-50%);background:#fff;border:1px solid #2563EB;border-radius:11px;padding:11px 14px;box-shadow:0 8px 22px -12px rgba(16,24,40,.3);white-space:nowrap">
+   <div style="font-size:13.5px;font-weight:600">Appel manqué</div><div style="font-size:12px;color:#8A909B">19:20</div></div>
+  <div style="position:absolute;left:370px;top:72px;transform:translate(-50%,-50%);background:#fff;border:1px solid #EBECEF;border-radius:11px;padding:11px 14px;white-space:nowrap">
+   <div style="font-size:13.5px;font-weight:600">Qualifier</div><div style="font-size:12px;color:#8A909B">budget, délai</div></div>
+  <div style="position:absolute;left:370px;top:208px;transform:translate(-50%,-50%);background:#fff;border:1px solid #EBECEF;border-radius:11px;padding:11px 14px;white-space:nowrap">
+   <div style="font-size:13.5px;font-weight:600">Rappeler par SMS</div><div style="font-size:12px;color:#8A909B">dans la minute</div></div>
+  <div style="position:absolute;left:660px;top:140px;transform:translate(-50%,-50%);background:#F6FCF9;border:1px solid #CBEBDC;border-radius:11px;padding:11px 14px;white-space:nowrap">
+   <div style="font-size:13.5px;font-weight:600;color:#0F9960">Rendez-vous proposé ✓</div><div style="font-size:12px;color:#5B9C7E">jeudi 14h</div></div>
+ </div>
+ <p class="cap" style="margin-top:16px">Trois automatisations s'enchaînent en boucle, comme dans un outil de workflow.</p></div>
+</x-dc>
+</body>
+</html>

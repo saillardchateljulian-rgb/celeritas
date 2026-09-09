@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@400;500;600&display=swap">
+  <style>
+    body{margin:0;background:#fff;font-family:Inter,system-ui,sans-serif;color:#0F1115;-webkit-font-smoothing:antialiased}
+    a{color:#2563EB}a:hover{color:#1D4ED8}
+    .eb{font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#8A909B}
+    .h1{font-family:'Inter Tight',Inter,sans-serif;font-weight:500;letter-spacing:-.045em;line-height:1.04;font-size:54px;margin:18px 0 0}
+    .h2{font-family:'Inter Tight',Inter,sans-serif;font-weight:500;letter-spacing:-.04em;line-height:1.14;font-size:34px;margin:14px 0 0}
+    .bl{color:#2563EB}.gy{color:#5B6270}
+    .p{color:#5B6270;font-size:16px;line-height:1.6;margin:16px 0 0}
+    .cap{color:#8A909B;font-size:13px;margin:0}
+    .btn{display:inline-flex;align-items:center;gap:8px;background:#0F1115;color:#fff;border-radius:999px;padding:13px 24px;font-size:15px;font-weight:500}
+    .btn2{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#0F1115;border-radius:999px;padding:13px 24px;font-size:15px;font-weight:500;box-shadow:inset 0 0 0 1px #EBECEF}
+    .win{border:1px solid #EBECEF;border-radius:14px;overflow:hidden;background:#fff}
+    .wbar{padding:12px 16px;border-bottom:1px solid #F2F3F5;font-size:12.5px;color:#8A909B;display:flex;justify-content:space-between}
+    .row{display:grid;grid-template-columns:1fr auto;gap:3px 12px;padding:13px 16px;border-bottom:1px solid #F2F3F5}
+    .row b{font-size:14.5px;font-weight:500}
+    .row i{font-style:normal;font-size:12.5px;color:#8A909B}
+    .row s{grid-column:2;justify-self:end;text-decoration:none;font-size:11.5px;font-weight:600;color:#0F9960}
+    .row s.you{color:#2563EB}
+    .tabs{display:flex;gap:22px;font-size:14px;color:#8A909B;margin-bottom:20px}
+    .tabs b{color:#0F1115;font-weight:500;border-bottom:1px solid #0F1115;padding-bottom:6px}
+  </style>
+</helmet>
+<div style="padding:44px 48px">
+ <div class="eb">Comment ça démarre</div>
+ <p class="h2" style="max-width:26ch"><span class="bl">Trois semaines</span> entre le premier appel et un système qui tourne.</p>
+ <div style="margin-top:36px"><div style="display:grid;grid-template-columns:120px 28px 1fr;gap:0;align-items:start">
+ <div style="text-align:right;padding:0 22px 34px 0;font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8A909B">Jour 0</div>
+ <div style="position:relative;height:100%">
+  <div style="position:absolute;left:50%;top:6px;bottom:0;width:1px;background:#2563EB;transform:translateX(-50%)"></div>
+  <div style="position:absolute;left:50%;top:6px;width:9px;height:9px;border-radius:99px;background:#2563EB;transform:translate(-50%,-50%);box-shadow:0 0 0 4px rgba(37,99,235,.14)"></div></div>
+ <div style="padding:0 0 34px 22px"><div style="font-size:18px;font-weight:600;margin-bottom:5px">Trente minutes au téléphone</div>
+ <div style="font-size:14.5px;color:#5B6270;line-height:1.55;max-width:52ch">Gratuit. Vous repartez avec quelque chose à appliquer seul.</div></div></div><div style="display:grid;grid-template-columns:120px 28px 1fr;gap:0;align-items:start">
+ <div style="text-align:right;padding:0 22px 34px 0;font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8A909B">Semaine 1</div>
+ <div style="position:relative;height:100%">
+  <div style="position:absolute;left:50%;top:6px;bottom:0;width:1px;background:#2563EB;transform:translateX(-50%)"></div>
+  <div style="position:absolute;left:50%;top:6px;width:9px;height:9px;border-radius:99px;background:#2563EB;transform:translate(-50%,-50%);box-shadow:0 0 0 4px rgba(37,99,235,.14)"></div></div>
+ <div style="padding:0 0 34px 22px"><div style="font-size:18px;font-weight:600;margin-bottom:5px">Une demi-journée sur place</div>
+ <div style="font-size:14.5px;color:#5B6270;line-height:1.55;max-width:52ch">Avec les gens qui font le travail. Vous recevez la liste chiffrée.</div></div></div><div style="display:grid;grid-template-columns:120px 28px 1fr;gap:0;align-items:start">
+ <div style="text-align:right;padding:0 22px 34px 0;font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8A909B">Semaines 2 à 4</div>
+ <div style="position:relative;height:100%">
+  <div style="position:absolute;left:50%;top:6px;bottom:0;width:1px;background:#2563EB;transform:translateX(-50%)"></div>
+  <div style="position:absolute;left:50%;top:6px;width:9px;height:9px;border-radius:99px;background:#2563EB;transform:translate(-50%,-50%);box-shadow:0 0 0 4px rgba(37,99,235,.14)"></div></div>
+ <div style="padding:0 0 34px 22px"><div style="font-size:18px;font-weight:600;margin-bottom:5px">Le premier système, en production</div>
+ <div style="font-size:14.5px;color:#5B6270;line-height:1.55;max-width:52ch">Construit, testé, il tourne dans vos comptes.</div></div></div><div style="display:grid;grid-template-columns:120px 28px 1fr;gap:0;align-items:start">
+ <div style="text-align:right;padding:0 22px 34px 0;font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8A909B">Ensuite</div>
+ <div style="position:relative;height:100%">
+  <div style="position:absolute;left:50%;top:6px;bottom:0;width:1px;background:#EBECEF;transform:translateX(-50%)"></div>
+  <div style="position:absolute;left:50%;top:6px;width:9px;height:9px;border-radius:99px;background:#2563EB;transform:translate(-50%,-50%);box-shadow:0 0 0 4px rgba(37,99,235,.14)"></div></div>
+ <div style="padding:0 0 34px 22px"><div style="font-size:18px;font-weight:600;margin-bottom:5px">Vous décidez</div>
+ <div style="font-size:14.5px;color:#5B6270;line-height:1.55;max-width:52ch">Un autre, ou rien du tout. Rien ne se reconduit tout seul.</div></div></div></div></div>
+</x-dc>
+</body>
+</html>

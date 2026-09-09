@@ -1,15 +1,17 @@
 {
+  "pages": [
+    { "id": "page-1", "name": "Retenue" },
+    { "id": "page-2", "name": "Écartées" }
+  ],
   "artboards": [
-    { "file": "Main.dc.html",       "x": 0,    "y": 0,   "w": 880, "h": 600, "title": "A · Agenda de la semaine" },
-    { "file": "DirectionB.dc.html", "x": 980,  "y": 0,   "w": 880, "h": 520, "title": "B · La journée découpée" },
-    { "file": "DirectionC.dc.html", "x": 0,    "y": 740, "w": 880, "h": 580, "title": "C · Avant et après" },
-    { "file": "DirectionD.dc.html", "x": 980,  "y": 740, "w": 880, "h": 520, "title": "D · La journée hachée" }
+    { "file": "Main.dc.html",       "x": 0,    "y": 0, "w": 880, "h": 580, "title": "C · Avant et après", "page": "page-1" },
+    { "file": "DirectionA.dc.html", "x": 0,    "y": 0, "w": 880, "h": 600, "title": "A · Agenda de la semaine", "page": "page-2" },
+    { "file": "DirectionB.dc.html", "x": 980,  "y": 0, "w": 880, "h": 520, "title": "B · La journée découpée", "page": "page-2" },
+    { "file": "DirectionD.dc.html", "x": 1960, "y": 0, "w": 880, "h": 520, "title": "D · La journée hachée", "page": "page-2" }
   ],
   "annotations": [
-    { "id": "note-a", "x": 0,   "y": -150, "w": 380, "text": "A · Agenda de la semaine\nTout le monde sait lire un agenda. On voit que le répétitif est éparpillé partout, jamais en gros bloc.\nRisque : cinq colonnes, ça fait beaucoup à lire d'un coup." },
-    { "id": "note-b", "x": 980, "y": -150, "w": 380, "text": "B · La journée découpée\nUne seule barre, quatre postes nommés, et le vrai métier en gris.\nLe plus lisible du lot. Risque : ça ressemble à un graphique de consultant." },
-    { "id": "note-c", "x": 0,   "y": 590,  "w": 380, "text": "C · Avant et après\nMontre directement ce que le client achète : la part hachurée qui lui revient.\nLe plus vendeur. Risque : promet un résultat avant la visite." },
-    { "id": "note-d", "x": 980, "y": 590,  "w": 380, "text": "D · La journée hachée\nOnze tranches bleues sur une seule journée. Sert la phrase « ça part par tranches de dix minutes ».\nLe plus honnête, aucune proportion affichée. Risque : plus abstrait." }
+    { "id": "note-c", "x": 0, "y": -170, "w": 420, "text": "Direction retenue.\nEn ligne sur le site, section « L'idée ».\nLa mention « proportions données en exemple » est conservée : sans elle, le graphique promet un résultat qui n'a pas encore été mesuré chez le client.", "page": "page-1" },
+    { "id": "note-ecartees", "x": 0, "y": -130, "w": 420, "text": "Les trois autres propositions, gardées pour mémoire.", "page": "page-2" }
   ],
-  "launch": { "view": "canvas" }
+  "launch": { "view": "canvas", "page": "page-1" }
 }

@@ -59,6 +59,29 @@
   "What is left":"Ce qui reste","Given back to your team":"Rendu à votre équipe",
   "Proportions shown as an example. Yours is measured during the first visit.":
    "Proportions données en exemple. La vôtre se mesure pendant la première visite.",
+  /* sections refaites */
+  "Half a day, screens shared":"Une demi-journée, écrans partagés",
+  "By video, with the people doing the work. You get a costed list of where the hours go.":
+   "En visio, avec les gens qui font le travail. Vous recevez la liste chiffrée des heures perdues.",
+  "We look together":"On regarde ensemble",
+  "by video":"en visio",
+  "By video, with the people doing the work, screens shared. You get a costed list of where the time goes.":
+   "En visio, avec les gens qui font le travail, écrans partagés. Vous recevez la liste chiffrée des heures perdues.",
+  "Proportions shown as an example. Yours is measured during the first session.":
+   "Proportions données en exemple. La vôtre se mesure pendant la première séance.",
+  "The first session is deducted":"La première séance est déduite",
+  "Written before the next call starts.":"Écrits avant l'appel suivant.",
+  "Typed once. The rest follows.":"Saisi une fois. Le reste suit.",
+  "Always current. Nobody pastes exports any more.":"À jour en permanence. Plus personne ne colle d'exports.",
+  "Hiring someone":"Embaucher","Building it once":"Construire une fois",
+  "A salary, every year":"Un salaire, tous les ans","Recruit, train, replace":"Recruter, former, remplacer",
+  "One build, then it is yours":"Une construction, puis c'est à vous","Nothing to recruit":"Rien à recruter",
+  "Three weeks per workflow, firm price agreed before a line of code is written.":
+   "Trois semaines par système, prix ferme convenu avant la première ligne de code.",
+  "Half a day by video with the people doing the work. The costed list within a week, deducted afterwards.":
+   "Une demi-journée en visio avec les gens qui font le travail. La liste chiffrée sous une semaine, déduite ensuite.",
+  "Monthly, optional, cancel at any time.":"Au mois, optionnel, résiliable à tout moment.",
+  "Running now":"En cours d'exécution",
   /* déroulé */
   "Three weeks":"Trois semaines","from the first call to something running.":"entre le premier appel et un système qui tourne.",
   "Here is exactly what happens.":"Voici exactement ce qui se passe.",

@@ -16,86 +16,43 @@
     .h em{font-style:normal;color:#2563EB}
     .h span{color:#5B6270}
     .cap{color:#8A909B;font-size:13px;margin:0}
+    .lg{display:flex;align-items:center;gap:10px;font-size:13.5px;color:#5B6270}
+    .sw{width:12px;height:12px;border-radius:4px;display:block}
   </style>
 </helmet>
 
 <div style="padding:44px 48px 40px; display:flex; flex-direction:column; gap:34px">
   <div>
     <div class="eyebrow">L'idée</div>
-    <p class="h">Une semaine, c'est <em>quarante heures</em> par personne. <span>Une partie, c'est le même travail, encore et encore.</span></p>
+    <p class="h">La même semaine, <em>avant et après</em>. <span>La différence, c'est ce qu'on vous rend.</span></p>
   </div>
 
-  <div style="display:grid; grid-template-columns:46px repeat(5, minmax(0,1fr)); gap:0 10px">
-    <div></div>
-    <div style="font-size:12px;font-weight:600;color:#5B6270;padding-bottom:9px">Lundi</div>
-    <div style="font-size:12px;font-weight:600;color:#5B6270;padding-bottom:9px">Mardi</div>
-    <div style="font-size:12px;font-weight:600;color:#5B6270;padding-bottom:9px">Mercredi</div>
-    <div style="font-size:12px;font-weight:600;color:#5B6270;padding-bottom:9px">Jeudi</div>
-    <div style="font-size:12px;font-weight:600;color:#5B6270;padding-bottom:9px">Vendredi</div>
-
-    <div style="display:flex; flex-direction:column; gap:0; border-top:1px solid #EBECEF">
-      <div style="height:29px;font-size:11px;color:#B4B9C2;padding-top:4px">8h</div>
-      <div style="height:29px;font-size:11px;color:#B4B9C2;padding-top:4px">10h</div>
-      <div style="height:29px;font-size:11px;color:#B4B9C2;padding-top:4px">12h</div>
-      <div style="height:29px;font-size:11px;color:#B4B9C2;padding-top:4px">14h</div>
-      <div style="height:29px;font-size:11px;color:#B4B9C2;padding-top:4px">16h</div>
-      <div style="height:29px;font-size:11px;color:#B4B9C2;padding-top:4px">18h</div>
+  <div style="display:grid; grid-template-columns:1fr 96px 1fr; align-items:end; gap:0">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:13px;font-weight:600;color:#5B6270">Aujourd'hui</div>
+      <div style="display:flex;flex-direction:column;border-radius:12px;overflow:hidden;height:250px;gap:2px">
+        <div style="flex:16;background:#2563EB;display:flex;align-items:center;padding:0 16px;color:#fff;font-size:14px;font-weight:600">Travail répétitif</div>
+        <div style="flex:24;background:#F1F2F4;display:flex;align-items:center;padding:0 16px;font-size:14px;font-weight:600;color:#5B6270">Votre métier</div>
+      </div>
     </div>
 
-    <div style="display:flex;flex-direction:column;gap:3px;border-top:1px solid #EBECEF;padding-top:3px">
-      <div style="height:23px;border-radius:5px;background:#2563EB"></div>
-      <div style="height:52px;border-radius:5px;background:#F1F2F4"></div>
-      <div style="height:14px;border-radius:5px;background:#2563EB"></div>
-      <div style="height:35px;border-radius:5px;background:#F1F2F4"></div>
-      <div style="height:20px;border-radius:5px;background:#2563EB"></div>
-      <div style="height:26px;border-radius:5px;background:#F1F2F4"></div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:8px;padding-bottom:104px">
+      <svg width="52" height="16" viewBox="0 0 52 16" fill="none" stroke="#2563EB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 8h46"/><path d="M42 3l6 5-6 5"/>
+      </svg>
     </div>
 
-    <div style="display:flex;flex-direction:column;gap:3px;border-top:1px solid #EBECEF;padding-top:3px">
-      <div style="height:40px;border-radius:5px;background:#F1F2F4"></div>
-      <div style="height:17px;border-radius:5px;background:#2563EB"></div>
-      <div style="height:29px;border-radius:5px;background:#F1F2F4"></div>
-      <div style="height:23px;border-radius:5px;background:#2563EB"></div>
-      <div style="height:44px;border-radius:5px;background:#F1F2F4"></div>
-      <div style="height:14px;border-radius:5px;background:#2563EB"></div>
-    </div>
-
-    <div style="display:flex;flex-direction:column;gap:3px;border-top:1px solid #EBECEF;padding-top:3px">
-      <div style="height:17px;border-radius:5px;background:#2563EB"></div>
-      <div style="height:32px;border-radius:5px;background:#F1F2F4"></div>
-      <div style="height:26px;border-radius:5px;background:#2563EB"></div>
-      <div style="height:49px;border-radius:5px;background:#F1F2F4"></div>
-      <div style="height:14px;border-radius:5px;background:#2563EB"></div>
-      <div style="height:26px;border-radius:5px;background:#F1F2F4"></div>
-    </div>
-
-    <div style="display:flex;flex-direction:column;gap:3px;border-top:1px solid #EBECEF;padding-top:3px">
-      <div style="height:55px;border-radius:5px;background:#F1F2F4"></div>
-      <div style="height:20px;border-radius:5px;background:#2563EB"></div>
-      <div style="height:23px;border-radius:5px;background:#F1F2F4"></div>
-      <div style="height:17px;border-radius:5px;background:#2563EB"></div>
-      <div style="height:38px;border-radius:5px;background:#F1F2F4"></div>
-      <div style="height:14px;border-radius:5px;background:#2563EB"></div>
-    </div>
-
-    <div style="display:flex;flex-direction:column;gap:3px;border-top:1px solid #EBECEF;padding-top:3px">
-      <div style="height:20px;border-radius:5px;background:#2563EB"></div>
-      <div style="height:26px;border-radius:5px;background:#F1F2F4"></div>
-      <div style="height:32px;border-radius:5px;background:#2563EB"></div>
-      <div style="height:35px;border-radius:5px;background:#F1F2F4"></div>
-      <div style="height:23px;border-radius:5px;background:#2563EB"></div>
-      <div style="height:29px;border-radius:5px;background:#F1F2F4"></div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:13px;font-weight:600;color:#2563EB">Après un premier chantier</div>
+      <div style="display:flex;flex-direction:column;border-radius:12px;overflow:hidden;height:250px;gap:2px">
+        <div style="flex:5;background:#2563EB;display:flex;align-items:center;padding:0 16px;color:#fff;font-size:14px;font-weight:600">Ce qui reste</div>
+        <div style="flex:11;background:repeating-linear-gradient(135deg,#EFF5FF,#EFF5FF 7px,#fff 7px,#fff 14px);border:1px dashed #BFD5FB;display:flex;align-items:center;padding:0 16px;font-size:14px;font-weight:600;color:#2563EB">Rendu à votre équipe</div>
+        <div style="flex:24;background:#F1F2F4;display:flex;align-items:center;padding:0 16px;font-size:14px;font-weight:600;color:#5B6270">Votre métier</div>
+      </div>
     </div>
   </div>
 
-  <div style="display:flex; align-items:center; gap:30px; flex-wrap:wrap">
-    <div style="display:flex;align-items:center;gap:10px;font-size:13.5px;color:#5B6270">
-      <span style="width:12px;height:12px;border-radius:4px;background:#2563EB;display:block"></span>Répétitif, donc automatisable</div>
-    <div style="display:flex;align-items:center;gap:10px;font-size:13.5px;color:#5B6270">
-      <span style="width:12px;height:12px;border-radius:4px;background:#F1F2F4;display:block"></span>Le travail que vous vendez</div>
-  </div>
-
-  <p class="cap">La proportion est différente dans chaque entreprise. Trouver la vôtre, c'est l'objet de la première visite.</p>
+  <p class="cap">Proportions données en exemple. La vôtre se mesure pendant la première visite.</p>
 </div>
 </x-dc>
 </body>

@@ -1,0 +1,279 @@
+{
+ "pages": [
+  {
+   "id": "page-1",
+   "name": "Héro"
+  },
+  {
+   "id": "page-2",
+   "name": "Capacités"
+  },
+  {
+   "id": "page-3",
+   "name": "Branchement"
+  },
+  {
+   "id": "page-4",
+   "name": "Étapes"
+  },
+  {
+   "id": "page-5",
+   "name": "Comparatif"
+  },
+  {
+   "id": "page-6",
+   "name": "Scène noire"
+  },
+  {
+   "id": "page-7",
+   "name": "Tarifs"
+  },
+  {
+   "id": "page-8",
+   "name": "Fin"
+  }
+ ],
+ "artboards": [
+  {
+   "file": "Main.dc.html",
+   "x": 0,
+   "y": 0,
+   "w": 900,
+   "h": 620,
+   "title": "A · Héro centré (actuel)",
+   "page": "page-1"
+  },
+  {
+   "file": "HeroB.dc.html",
+   "x": 1000,
+   "y": 0,
+   "w": 900,
+   "h": 520,
+   "title": "B · Héro en deux colonnes",
+   "page": "page-1"
+  },
+  {
+   "file": "HeroC.dc.html",
+   "x": 2000,
+   "y": 0,
+   "w": 900,
+   "h": 620,
+   "title": "C · Héro sombre",
+   "page": "page-1"
+  },
+  {
+   "file": "CapA.dc.html",
+   "x": 0,
+   "y": 0,
+   "w": 900,
+   "h": 560,
+   "title": "A · Six cartes (actuel)",
+   "page": "page-2"
+  },
+  {
+   "file": "CapB.dc.html",
+   "x": 1000,
+   "y": 0,
+   "w": 900,
+   "h": 640,
+   "title": "B · Liste éditoriale",
+   "page": "page-2"
+  },
+  {
+   "file": "CapC.dc.html",
+   "x": 2000,
+   "y": 0,
+   "w": 900,
+   "h": 600,
+   "title": "C · Bento",
+   "page": "page-2"
+  },
+  {
+   "file": "PlugA.dc.html",
+   "x": 0,
+   "y": 0,
+   "w": 900,
+   "h": 520,
+   "title": "A · Canevas de nœuds",
+   "page": "page-3"
+  },
+  {
+   "file": "PlugB.dc.html",
+   "x": 1000,
+   "y": 0,
+   "w": 900,
+   "h": 540,
+   "title": "B · Journal d'exécution",
+   "page": "page-3"
+  },
+  {
+   "file": "PlugC.dc.html",
+   "x": 2000,
+   "y": 0,
+   "w": 900,
+   "h": 520,
+   "title": "C · La file qui se vide",
+   "page": "page-3"
+  },
+  {
+   "file": "StepA.dc.html",
+   "x": 0,
+   "y": 0,
+   "w": 900,
+   "h": 420,
+   "title": "A · Quatre colonnes (actuel)",
+   "page": "page-4"
+  },
+  {
+   "file": "StepB.dc.html",
+   "x": 1000,
+   "y": 0,
+   "w": 900,
+   "h": 560,
+   "title": "B · Frise verticale",
+   "page": "page-4"
+  },
+  {
+   "file": "VsA.dc.html",
+   "x": 0,
+   "y": 0,
+   "w": 900,
+   "h": 480,
+   "title": "A · Trois lignes (actuel)",
+   "page": "page-5"
+  },
+  {
+   "file": "VsB.dc.html",
+   "x": 1000,
+   "y": 0,
+   "w": 900,
+   "h": 520,
+   "title": "B · Deux cartes",
+   "page": "page-5"
+  },
+  {
+   "file": "DarkA.dc.html",
+   "x": 0,
+   "y": 0,
+   "w": 900,
+   "h": 560,
+   "title": "A · Une idée à la fois (actuel)",
+   "page": "page-6"
+  },
+  {
+   "file": "DarkB.dc.html",
+   "x": 1000,
+   "y": 0,
+   "w": 900,
+   "h": 480,
+   "title": "B · Les huit d'un coup",
+   "page": "page-6"
+  },
+  {
+   "file": "PriceA.dc.html",
+   "x": 0,
+   "y": 0,
+   "w": 900,
+   "h": 480,
+   "title": "A · Trois colonnes (actuel)",
+   "page": "page-7"
+  },
+  {
+   "file": "PriceB.dc.html",
+   "x": 1000,
+   "y": 0,
+   "w": 900,
+   "h": 520,
+   "title": "B · Bande horizontale",
+   "page": "page-7"
+  },
+  {
+   "file": "EndA.dc.html",
+   "x": 0,
+   "y": 0,
+   "w": 900,
+   "h": 340,
+   "title": "A · Appel centré (actuel)",
+   "page": "page-8"
+  },
+  {
+   "file": "EndB.dc.html",
+   "x": 1000,
+   "y": 0,
+   "w": 900,
+   "h": 380,
+   "title": "B · Bande sombre avec champ",
+   "page": "page-8"
+  }
+ ],
+ "annotations": [
+  {
+   "id": "n1",
+   "page": "page-1",
+   "x": 0,
+   "y": -140,
+   "w": 420,
+   "text": "HÉRO\nA est l'actuel. B libère de la place pour la démo à droite et raccourcit la page. C ouvre sur du noir : mémorable, mais plus froid dès la première seconde."
+  },
+  {
+   "id": "n2",
+   "page": "page-2",
+   "x": 0,
+   "y": -140,
+   "w": 420,
+   "text": "CAPACITÉS\nA est l'actuel, sûr mais banal. B transforme la liste en propos éditorial, plus haut de gamme. C est le plus moderne, mais hiérarchise à ta place."
+  },
+  {
+   "id": "n3",
+   "page": "page-3",
+   "x": 0,
+   "y": -140,
+   "w": 420,
+   "text": "BRANCHEMENT\nLes trois sont déjà codés et vivants sur la page labo. A parle le langage des outils d'automatisation. B est le plus crédible. C est le plus physique."
+  },
+  {
+   "id": "n4",
+   "page": "page-4",
+   "x": 0,
+   "y": -140,
+   "w": 420,
+   "text": "ÉTAPES\nA tient en peu de hauteur. B respire et se lit mieux sur mobile, mais rallonge la page."
+  },
+  {
+   "id": "n5",
+   "page": "page-5",
+   "x": 0,
+   "y": -140,
+   "w": 420,
+   "text": "COMPARATIF\nA est l'actuel, très rapide à lire. B assume la confrontation avec deux cartes, dont une éteinte."
+  },
+  {
+   "id": "n6",
+   "page": "page-6",
+   "x": 0,
+   "y": -140,
+   "w": 420,
+   "text": "SCÈNE NOIRE\nA force à faire défiler pour tout voir, ce qui crée le suspense. B donne les huit idées d'un coup : moins spectaculaire, plus utile pour un patron pressé."
+  },
+  {
+   "id": "n7",
+   "page": "page-7",
+   "x": 0,
+   "y": -140,
+   "w": 420,
+   "text": "TARIFS\nA sépare bien les trois étapes. B les met sur une seule ligne et récupère de la place pour la réassurance juste en dessous."
+  },
+  {
+   "id": "n8",
+   "page": "page-8",
+   "x": 0,
+   "y": -140,
+   "w": 420,
+   "text": "FIN\nA est sobre. B ferme le site sur du noir et propose un champ, ce qui invite plus qu'un bouton."
+  }
+ ],
+ "launch": {
+  "view": "canvas",
+  "page": "page-1"
+ }
+}

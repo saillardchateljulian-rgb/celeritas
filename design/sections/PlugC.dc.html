@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@400;500;600&display=swap">
+  <style>
+    body{margin:0;background:#fff;font-family:Inter,system-ui,sans-serif;color:#0F1115;-webkit-font-smoothing:antialiased}
+    a{color:#2563EB}a:hover{color:#1D4ED8}
+    .eb{font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#8A909B}
+    .h1{font-family:'Inter Tight',Inter,sans-serif;font-weight:500;letter-spacing:-.045em;line-height:1.04;font-size:54px;margin:18px 0 0}
+    .h2{font-family:'Inter Tight',Inter,sans-serif;font-weight:500;letter-spacing:-.04em;line-height:1.14;font-size:34px;margin:14px 0 0}
+    .bl{color:#2563EB}.gy{color:#5B6270}
+    .p{color:#5B6270;font-size:16px;line-height:1.6;margin:16px 0 0}
+    .cap{color:#8A909B;font-size:13px;margin:0}
+    .btn{display:inline-flex;align-items:center;gap:8px;background:#0F1115;color:#fff;border-radius:999px;padding:13px 24px;font-size:15px;font-weight:500}
+    .btn2{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#0F1115;border-radius:999px;padding:13px 24px;font-size:15px;font-weight:500;box-shadow:inset 0 0 0 1px #EBECEF}
+    .win{border:1px solid #EBECEF;border-radius:14px;overflow:hidden;background:#fff}
+    .wbar{padding:12px 16px;border-bottom:1px solid #F2F3F5;font-size:12.5px;color:#8A909B;display:flex;justify-content:space-between}
+    .row{display:grid;grid-template-columns:1fr auto;gap:3px 12px;padding:13px 16px;border-bottom:1px solid #F2F3F5}
+    .row b{font-size:14.5px;font-weight:500}
+    .row i{font-style:normal;font-size:12.5px;color:#8A909B}
+    .row s{grid-column:2;justify-self:end;text-decoration:none;font-size:11.5px;font-weight:600;color:#0F9960}
+    .row s.you{color:#2563EB}
+    .tabs{display:flex;gap:22px;font-size:14px;color:#8A909B;margin-bottom:20px}
+    .tabs b{color:#0F1115;font-weight:500;border-bottom:1px solid #0F1115;padding-bottom:6px}
+  </style>
+</helmet>
+<div style="padding:44px 48px">
+ <div class="eb">Comment ça se branche</div>
+ <p class="h2" style="max-width:26ch">La file <span class="bl">se vide</span> pendant que vous travaillez.</p>
+ <div style="display:grid;grid-template-columns:1fr 1fr;border:1px solid #EBECEF;border-radius:14px;overflow:hidden;margin-top:34px;height:280px">
+  <div style="padding:20px;border-right:1px solid #EBECEF">
+   <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px"><b style="font-size:13.5px">En attente</b><span style="font-family:'Inter Tight';font-size:26px;font-weight:500;letter-spacing:-.04em">5</span></div>
+   <div style="border:1px solid #EBECEF;border-radius:10px;padding:11px 13px;margin-bottom:9px;font-size:13.5px">Demande de devis<small style="display:block;color:#8A909B;font-size:12px">formulaire du site</small></div>
+   <div style="border:1px solid #EBECEF;border-radius:10px;padding:11px 13px;margin-bottom:9px;font-size:13.5px">Appel manqué<small style="display:block;color:#8A909B;font-size:12px">19:20</small></div>
+   <div style="border:1px solid #EBECEF;border-radius:10px;padding:11px 13px;margin-bottom:9px;font-size:13.5px;opacity:.6">Devis à relancer<small style="display:block;color:#8A909B;font-size:12px">8 400 €</small></div>
+   <div style="border:1px solid #EBECEF;border-radius:10px;padding:11px 13px;font-size:13.5px;opacity:.3">Compte rendu à écrire<small style="display:block;color:#8A909B;font-size:12px">appel de 14 min</small></div>
+  </div>
+  <div style="padding:20px;background:#FCFDFC">
+   <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px"><b style="font-size:13.5px">Traité</b><span style="font-family:'Inter Tight';font-size:26px;font-weight:500;letter-spacing:-.04em;color:#0F9960">31</span></div>
+   <div style="border:1px solid #BBD5FF;background:#F3F8FF;border-radius:10px;padding:11px 13px;margin-bottom:9px;font-size:13.5px">Réclamation<small style="display:block;color:#3B6BC4;font-size:12px">livraison en retard · à vous</small></div>
+   <div style="border:1px solid #CBEBDC;background:#F6FCF9;border-radius:10px;padding:11px 13px;margin-bottom:9px;font-size:13.5px">Facture fournisseur<small style="display:block;color:#5B9C7E;font-size:12px">classée</small></div>
+   <div style="border:1px solid #CBEBDC;background:#F6FCF9;border-radius:10px;padding:11px 13px;font-size:13.5px;opacity:.6">Ligne à recopier<small style="display:block;color:#5B9C7E;font-size:12px">synchronisée</small></div>
+  </div>
+ </div>
+ <p class="cap" style="margin-top:16px">Les cartes traversent l'écran une par une, les compteurs bougent.</p></div>
+</x-dc>
+</body>
+</html>
