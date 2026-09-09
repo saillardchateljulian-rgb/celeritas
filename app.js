@@ -46,7 +46,7 @@ function draw(i,skel){const v=V[i];
  paint(v);}
 function paint(v){
  rows.innerHTML=v.rows.map((r,ix)=>`<div class="row" style="--i:${ix*55}ms"><span class="n">${esc(r[0])}</span><span class="m">${esc(r[1])}</span><span class="s">${esc(r[2])}</span><span class="tg ${r[3]}">${esc(r[4])}</span></div>`).join('');
- right.innerHTML=`<div class="draft"><div class="to">${v.right.to}</div>${v.right.p.map(p=>`<p>${p}</p>`).join('')}<p class="type">${v.right.ty}</p><div class="act"><span class="a1">Send</span><span class="a2">Edit</span><span class="a2">Later</span></div></div><p class="note">Nothing reaches a client without your approval, until you decide otherwise.</p>`;
+ right.innerHTML=`<div class="draft"><div class="to">${v.right.to}</div>${v.right.p.map(p=>`<p>${p}</p>`).join('')}<p class="type">${v.right.ty}</p><div class="act"><span class="a1">Send</span><span class="a2">Edit</span><span class="a2">Later</span></div></div><p class="note">${window.I18N&&window.I18N.lang==='fr'?"Rien ne part à un client sans votre validation, tant que vous n'en décidez pas autrement.":"Nothing reaches a client without your approval, until you decide otherwise."}</p>`;
 }
 const TB=[...document.querySelectorAll('.tab')];
 function sel(b){ai=TB.indexOf(b);TB.forEach(x=>{x.classList.remove('on');x.setAttribute('aria-selected','false')});b.classList.add('on');b.setAttribute('aria-selected','true');draw(+b.dataset.i);}
