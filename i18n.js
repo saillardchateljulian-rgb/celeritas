@@ -91,6 +91,12 @@
   "Delivery confirmations":"Confirmations de livraison","Site visit reports":"Comptes rendus de visite",
   "Holiday planning":"Planning des congés","Subcontractor paperwork":"Papiers des sous-traitants",
   "Warranty follow ups":"Suivi des garanties",
+  "Error 404":"Erreur 404",
+  "This page does not exist.":"Cette page n'existe pas.",
+  "The rest of the site does.":"Le reste du site, si.",
+  "You probably followed an old link. Everything lives on one page.":
+   "Vous avez sans doute suivi un ancien lien. Tout tient sur une seule page.",
+  "Back to the site":"Revenir au site",
   /* déroulé */
   "Three weeks":"Trois semaines","from the first call to something running.":"entre le premier appel et un système qui tourne.",
   "Here is exactly what happens.":"Voici exactement ce qui se passe.",
