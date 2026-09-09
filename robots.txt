@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://celeritas.agency/sitemap.xml

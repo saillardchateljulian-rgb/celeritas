@@ -1,0 +1,240 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Celeritas · le poste que vous n'avez pas les moyens d'embaucher</title>
+<meta name="description" content="Un assistant sur mesure qui traite vos demandes entrantes, suit vos devis, écrit vos comptes rendus et tient votre reporting. Il coûte moins qu'un mi-temps administratif et il ne s'arrête jamais.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+ --bg:#FFFFFF;--sub:#F7F8FA;--line:#E7E9ED;--hair:#EFF1F4;
+ --ink:#0E1116;--t2:#4A525E;--t3:#8A93A0;
+ --acc:#E5533D;--acc-s:#FDEEEB;--ok:#127C55;--ok-s:#E7F5EF;
+ --r:12px;--sh:0 1px 2px rgba(16,24,40,.04),0 8px 28px rgba(16,24,40,.06);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;letter-spacing:-.006em}
+.w{max-width:1120px;margin:0 auto;padding:0 24px}
+a{color:inherit;text-decoration:none}
+.mono{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+
+/* nav */
+header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.82);backdrop-filter:saturate(1.6) blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{font-weight:600;font-size:16.5px;letter-spacing:-.02em;display:flex;align-items:center;gap:9px}
+.dot{width:9px;height:9px;border-radius:3px;background:var(--acc)}
+.nav ul{display:flex;gap:26px;list-style:none;font-size:14.5px;color:var(--t2)}
+.nav ul a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;padding:10px 16px;border-radius:9px;font-size:14.5px;font-weight:500;transition:.15s}
+.btn:hover{background:var(--acc)}
+.btn.g{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn.g:hover{border-color:var(--ink);background:#fff}
+@media(max-width:900px){.nav ul{display:none}}
+
+/* hero */
+.hero{padding:66px 0 12px;text-align:center}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--acc-s);color:var(--acc);border-radius:999px;padding:6px 13px;font-size:13.5px;font-weight:500;margin-bottom:24px}
+h1{font-size:clamp(34px,5.6vw,62px);line-height:1.03;font-weight:600;letter-spacing:-.04em;max-width:15ch;margin:0 auto}
+h1 .u{background:linear-gradient(180deg,transparent 62%,var(--acc-s) 62%)}
+.lede{margin:24px auto 0;max-width:58ch;font-size:18.5px;color:var(--t2)}
+.hcta{margin-top:30px;display:flex;gap:11px;justify-content:center;flex-wrap:wrap}
+.fine{margin-top:16px;color:var(--t3);font-size:13.5px}
+
+/* app mockup */
+.stage{margin-top:52px;position:relative}
+.stage:before{content:"";position:absolute;inset:-40px -10px 40px;background:radial-gradient(60% 60% at 50% 0%,rgba(229,83,61,.10),transparent 70%);z-index:-1}
+.app{border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:var(--sh);overflow:hidden}
+.app-bar{display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid var(--hair);background:var(--sub)}
+.tl{display:flex;gap:6px}.tl i{width:10px;height:10px;border-radius:99px;background:#DDE1E6;display:block}
+.app-bar .ttl{font-size:13px;color:var(--t3);font-family:'IBM Plex Mono',monospace}
+.app-bar .badge{margin-left:auto;font-size:11.5px;color:var(--t3);border:1px solid var(--line);border-radius:6px;padding:3px 8px}
+.app-body{display:grid;grid-template-columns:1.35fr 1fr}
+.pane{padding:18px}
+.pane+.pane{border-left:1px solid var(--hair);background:var(--sub)}
+.ph{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.ph h3{font-size:14.5px;font-weight:600}
+.ph span{font-size:12.5px;color:var(--t3)}
+.q{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:12px;border:1px solid var(--line);border-radius:10px;background:#fff;margin-bottom:9px;text-align:left}
+.q .n{font-weight:500;font-size:14.5px}
+.q .m{font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:500}
+.q .s{grid-column:1/2;font-size:12.5px;color:var(--t3)}
+.q .tagr,.q .tago{grid-column:2/3;justify-self:end;font-size:11.5px;border-radius:6px;padding:2px 8px;font-weight:500}
+.tagr{background:var(--acc-s);color:var(--acc)}
+.tago{background:var(--ok-s);color:var(--ok)}
+.draft{border:1px solid var(--line);border-radius:10px;background:#fff;padding:14px;text-align:left}
+.draft .to{font-size:12.5px;color:var(--t3);border-bottom:1px solid var(--hair);padding-bottom:8px;margin-bottom:10px}
+.draft p{font-size:13.8px;color:var(--t2);margin-bottom:9px}
+.type:after{content:"";display:inline-block;width:2px;height:13px;background:var(--acc);vertical-align:-2px;margin-left:2px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.draft .act{display:flex;gap:7px;margin-top:12px}
+.draft .act span{font-size:12.5px;border-radius:7px;padding:6px 10px;font-weight:500}
+.a1{background:var(--ink);color:#fff}.a2{background:#fff;border:1px solid var(--line);color:var(--t2)}
+.capt{margin-top:12px;text-align:center;color:var(--t3);font-size:12.5px}
+@media(max-width:860px){.app-body{grid-template-columns:1fr}.pane+.pane{border-left:0;border-top:1px solid var(--hair)}}
+
+/* sections */
+section{padding:76px 0;border-top:1px solid var(--line)}
+.shead{max-width:60ch;margin-bottom:38px}
+.shead .mono{color:var(--acc);display:block;margin-bottom:12px}
+h2{font-size:clamp(25px,3.4vw,38px);font-weight:600;letter-spacing:-.032em;line-height:1.12}
+.shead p{margin-top:14px;color:var(--t2);font-size:17.5px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{border:1px solid var(--line);border-radius:var(--r);padding:24px;background:#fff}
+.card .k{width:30px;height:30px;border-radius:8px;background:var(--acc-s);color:var(--acc);display:flex;align-items:center;justify-content:center;font-size:13.5px;font-weight:600;margin-bottom:14px}
+.card h3{font-size:17px;font-weight:600;margin-bottom:7px}
+.card p{color:var(--t2);font-size:15px}
+@media(max-width:860px){.three{grid-template-columns:1fr}}
+
+/* sur mesure */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+@media(max-width:860px){.split{grid-template-columns:1fr;gap:26px}}
+.li{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid var(--hair)}
+.li:last-child{border-bottom:0}
+.li i{width:6px;height:6px;border-radius:99px;background:var(--acc);margin-top:9px;flex:none}
+.li b{font-weight:600;display:block;font-size:15.5px}
+.li span{color:var(--t2);font-size:14.5px}
+
+/* prix */
+.prix{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pc{border:1px solid var(--line);border-radius:var(--r);padding:26px;background:#fff;display:flex;flex-direction:column}
+.pc.hi{border-color:var(--ink);box-shadow:var(--sh)}
+.pc .st{font-size:13px;color:var(--t3);font-weight:500}
+.pc .amt{font-size:31px;font-weight:600;letter-spacing:-.03em;margin:8px 0 3px}
+.pc .amt small{font-size:15px;color:var(--t3);font-weight:400}
+.pc .dur{font-size:13.5px;color:var(--t3);padding-bottom:16px;border-bottom:1px solid var(--hair);margin-bottom:16px}
+.pc h3{font-size:16.5px;font-weight:600;margin-bottom:7px}
+.pc p{color:var(--t2);font-size:14.5px;flex:1}
+@media(max-width:860px){.prix{grid-template-columns:1fr}}
+
+/* faq */
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;padding:20px 0;font-weight:500;font-size:17px;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--acc);font-size:20px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{padding-bottom:22px;color:var(--t2);max-width:76ch;font-size:15.5px}
+
+/* final */
+.final{background:var(--sub);border:1px solid var(--line);border-radius:18px;padding:52px 40px;text-align:center;margin:76px 0}
+.final h2{max-width:20ch;margin:0 auto}
+.final p{margin:16px auto 0;max-width:50ch;color:var(--t2);font-size:17px}
+footer{border-top:1px solid var(--line);padding:26px 0 46px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--t3);font-size:13.5px}
+</style></head><body>
+
+<header><div class="w nav">
+  <span class="brand"><i class="dot"></i>Celeritas</span>
+  <ul>
+    <li><a href="#produit">Le produit</a></li>
+    <li><a href="#surmesure">Sur mesure</a></li>
+    <li><a href="#prix">Prix</a></li>
+    <li><a href="#faq">Questions</a></li>
+  </ul>
+  <a class="btn" href="#contact">Prendre rendez-vous</a>
+</div></header>
+
+<div class="w hero">
+  <span class="pill">Un poste entier, pas un logiciel de plus</span>
+  <h1>Le poste que vous n'avez pas <span class="u">les moyens d'embaucher</span>.</h1>
+  <p class="lede">Un assistant construit pour votre entreprise, qui traite vos demandes entrantes, suit vos devis, relance vos clients, écrit vos comptes rendus et tient votre reporting à jour. Il coûte moins cher qu'un mi-temps administratif et il ne s'arrête jamais.</p>
+  <div class="hcta"><a class="btn" href="#contact">Prendre rendez-vous</a><a class="btn g" href="#produit">Voir ce qu'il prend en charge</a></div>
+  <p class="fine">Premier chantier en production en trois semaines. Prix fixe annoncé avant de commencer.</p>
+
+  <div class="stage">
+    <div class="app">
+      <div class="app-bar"><span class="tl"><i></i><i></i><i></i></span><span class="ttl">journée du mardi 8 · travail traité</span><span class="badge">Exemple d'interface</span></div>
+      <div class="app-body">
+        <div class="pane">
+          <div class="ph"><h3>Ce qui a été fait ce matin</h3><span>sans que personne s'en occupe</span></div>
+          <div class="q"><span class="n">Demande entrante qualifiée et routée</span><span class="m">08:12</span><span class="s">Chantier de rénovation, budget annoncé, envoyée au bon commercial</span><span class="tago">Traité</span></div>
+          <div class="q"><span class="n">Compte rendu d'appel écrit et classé</span><span class="m">09:41</span><span class="s">Fiche client mise à jour, prochaine action programmée</span><span class="tago">Traité</span></div>
+          <div class="q"><span class="n">Quatre devis relancés</span><span class="m">10:00</span><span class="s">Une réponse reçue, un rendez-vous pris pour jeudi</span><span class="tago">Traité</span></div>
+          <div class="q"><span class="n">Devis à 21 600 € sans réponse depuis 21 jours</span><span class="m">10:02</span><span class="s">Trop gros pour un mail, il vous le remonte</span><span class="tagr">À vous d'appeler</span></div>
+          <div class="q"><span class="n">Reporting de la semaine mis à jour</span><span class="m">10:15</span><span class="s">Chiffre d'affaires signé, devis en cours, taux de transformation</span><span class="tago">Traité</span></div>
+        </div>
+        <div class="pane">
+          <div class="ph"><h3>Ce qu'il vous demande</h3><span>une validation</span></div>
+          <div class="draft">
+            <div class="to">Relance préparée · devis du 28 août · 8 400 €</div>
+            <p>Bonjour,</p>
+            <p>Je reviens vers vous au sujet du devis pour la rénovation du deuxième étage, envoyé il y a neuf jours.</p>
+            <p class="type">Est-ce que le budget correspond à ce que vous aviez prévu, ou faut-il qu'on en reparle</p>
+            <div class="act"><span class="a1">Envoyer</span><span class="a2">Modifier</span><span class="a2">Plus tard</span></div>
+          </div>
+          <p class="capt" style="margin-top:14px;text-align:left">Rien ne part à un client sans votre accord, tant que vous ne décidez pas le contraire.</p>
+        </div>
+      </div>
+    </div>
+    <p class="capt">Exemple d'interface. Le vôtre reprend vos champs, vos délais et votre façon d'écrire.</p>
+  </div>
+</div>
+
+<section id="produit"><div class="w">
+  <div class="shead"><span class="mono">Ce qu'il prend en charge</span><h2>Le travail que personne chez vous n'a le temps de faire correctement</h2><p>On ne branche pas tout le premier jour. On installe un poste à la fois, dans l'ordre où ça vous rapporte le plus.</p></div>
+  <div class="three">
+    <div class="card"><div class="k">1</div><h3>Les demandes entrantes</h3><p>Mail, formulaire, appel manqué. Il qualifie, il classe, il route vers la bonne personne et il répond dans la minute au lieu du lendemain midi.</p></div>
+    <div class="card"><div class="k">2</div><h3>Le suivi des devis</h3><p>Il sait lesquels attendent une réponse, il prépare la relance au bon moment, et il vous dit lesquels méritent un coup de téléphone plutôt qu'un mail.</p></div>
+    <div class="card"><div class="k">3</div><h3>Les comptes rendus</h3><p>Le commercial raccroche, la fiche client est déjà remplie et la prochaine action programmée. Plus rien ne reste dans la tête de quelqu'un.</p></div>
+    <div class="card"><div class="k">4</div><h3>La double saisie</h3><p>L'information est saisie une fois. Le devis, le tableur de suivi et la compta se remplissent ensuite tout seuls, sans recopiage et sans faute de frappe.</p></div>
+    <div class="card"><div class="k">5</div><h3>Le reporting</h3><p>À jour en permanence, sans que personne passe une demi-journée par mois à coller des exports les uns derrière les autres.</p></div>
+    <div class="card"><div class="k">6</div><h3>Ce qui est propre à vous</h3><p>Chaque entreprise a deux ou trois tâches absurdes que personne d'autre ne fait. C'est du sur mesure, donc elles rentrent aussi.</p></div>
+  </div>
+</div></section>
+
+<section><div class="w">
+  <div class="shead"><span class="mono">Ce que ça remplace</span><h2>Comparez au poste que vous alliez ouvrir</h2><p>Ce n'est pas un abonnement à un logiciel de plus. C'est la charge de travail d'un mi-temps administratif, prise en charge une fois pour toutes.</p></div>
+  <div class="split">
+    <div>
+      <div class="li"><i></i><div><b>Un mi-temps administratif</b><span>Entre quinze et vingt mille euros par an, chargés, tous les ans, et il faut le recruter puis le former.</span></div></div>
+      <div class="li"><i></i><div><b>Les congés, les arrêts, le turnover</b><span>Quand la personne s'en va, son savoir s'en va avec elle et vous recommencez.</span></div></div>
+      <div class="li"><i></i><div><b>Les heures que votre équipe fait déjà en plus</b><span>Le plus souvent, ce travail n'est confié à personne. Il est fait le soir, mal, par des gens payés pour autre chose.</span></div></div>
+    </div>
+    <div>
+      <div class="li"><i></i><div><b>Une mise en place, puis c'est à vous</b><span>Vous payez la construction une fois. L'outil vous appartient, il tourne dans vos comptes, il ne vous est pas loué.</span></div></div>
+      <div class="li"><i></i><div><b>Il ne prend pas de congés</b><span>Il travaille la nuit, le samedi, et pendant la semaine où tout le monde est sur un chantier.</span></div></div>
+      <div class="li"><i></i><div><b>Il ne part jamais avec le savoir</b><span>Vos règles sont écrites dans l'outil et documentées, pas dans la tête de quelqu'un.</span></div></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="surmesure"><div class="w">
+  <div class="split">
+    <div>
+      <div class="shead" style="margin-bottom:22px"><span class="mono">Sur mesure</span><h2>Je construis, je ne revends pas.</h2><p>Il n'y a pas de logiciel Celeritas que je vous installe. Chaque assistant est construit pour une entreprise, avec ses règles, ses outils et son vocabulaire. C'est ce qui fait qu'il est utilisé au lieu d'être abandonné au bout d'un mois.</p></div>
+      <a class="btn" href="#contact">Prendre rendez-vous</a>
+    </div>
+    <div>
+      <div class="li"><i></i><div><b>La même information tapée trois fois</b><span>Devis, tableur de suivi, puis compta. Chacun refait le travail du précédent.</span></div></div>
+      <div class="li"><i></i><div><b>Le tableur dont toute la boîte dépend</b><span>Deux personnes savent l'utiliser. Elles partent en congés, tout ralentit.</span></div></div>
+      <div class="li"><i></i><div><b>Les comptes rendus d'appels jamais écrits</b><span>Le commercial raccroche et l'information reste dans sa tête.</span></div></div>
+      <div class="li"><i></i><div><b>Les demandes du soir traitées le lendemain</b><span>Entre les deux, un concurrent a répondu.</span></div></div>
+      <div class="li"><i></i><div><b>Le reporting refait à la main chaque mois</b><span>Une demi-journée de copier coller entre exports.</span></div></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="prix"><div class="w">
+  <div class="shead"><span class="mono">Prix</span><h2>Vous savez ce que ça coûte avant de dire oui</h2><p>Prix fixe à chaque étape, jamais de facturation à la journée. Si je mets plus de temps que prévu, ça ne change pas votre facture. Vous pouvez vous arrêter après n'importe quelle étape.</p></div>
+  <div class="prix">
+    <div class="pc"><span class="st">Étape 01</span><div class="amt">1 490 €<small> HT</small></div><div class="dur">Une semaine, déduit de la mise en place</div><h3>Je viens voir</h3><p>Une demi-journée chez vous avec les gens qui font le travail. Je repars avec la liste chiffrée de ce qui vous coûte du temps, et ce que l'assistant prendra en charge en premier.</p></div>
+    <div class="pc hi"><span class="st">Étape 02</span><div class="amt">12 000 €<small> HT et plus</small></div><div class="dur">Premier poste en production en trois semaines</div><h3>La mise en place</h3><p>On installe les postes un par un, dans l'ordre où ça rapporte le plus. Chaque poste a son prix ferme et sa date. À comparer aux quinze à vingt mille euros annuels d'un mi-temps.</p></div>
+    <div class="pc"><span class="st">Étape 03</span><div class="amt">490 €<small> HT / mois</small></div><div class="dur">Optionnel, résiliable à tout moment</div><h3>Je garde un œil</h3><p>Surveillance, corrections, et ajustement des règles quand votre activité change. Vous n'avez rien à gérer.</p></div>
+  </div>
+</div></section>
+
+<section id="faq"><div class="w">
+  <div class="shead"><span class="mono">Questions</span><h2>Ce qu'on me demande avant de signer</h2></div>
+  <details open><summary>C'est de l'IA, ça va écrire n'importe quoi à mes clients ?</summary><p>Rien ne part à un client sans votre validation, tant que vous ne décidez pas le contraire après avoir vu les messages pendant quelques semaines. Le modèle rédige, vous gardez la main. Et sur tout ce qui n'a pas besoin d'être rédigé, j'utilise de l'automatisation classique, qui coûte moins cher et ne se trompe pas.</p></details>
+  <details><summary>On a déjà des logiciels, on ne va pas tout changer.</summary><p>Il n'y a rien à changer. L'assistant se branche sur ce que vous utilisez déjà, votre logiciel de devis, votre boîte mail, vos tableurs. Il comble ce que vos outils ne font pas au lieu de les remplacer.</p></details>
+  <details><summary>Nos données partent où ?</summary><p>Elles restent dans vos outils et vos comptes. Si un traitement doit sortir de chez vous, je vous dis lequel, chez quel prestataire et pourquoi, avant de le mettre en place.</p></details>
+  <details><summary>Personne chez nous ne saura maintenir ça.</summary><p>C'est le cas de la plupart des entreprises avec qui je travaille et c'est prévu. Documentation livrée, formation des personnes qui s'en servent, et le forfait de maintien si vous préférez ne rien gérer du tout.</p></details>
+  <details><summary>Pourquoi pas un tarif à la journée ?</summary><p>Parce qu'à la journée, vous payez mes lenteurs. Avec un prix fixe, vous connaissez le coût avant de vous engager, et le dépassement est mon problème.</p></details>
+  <details><summary>Vous travaillez avec quelles entreprises ?</summary><p>Des structures de dix à soixante personnes, sans informaticien en interne, dont l'activité tourne sur des tableurs et des copier-coller. Le secteur importe peu.</p></details>
+</div></section>
+
+<div class="w"><div class="final" id="contact">
+  <h2>Quel poste vous n'arrivez pas à ouvrir cette année ?</h2>
+  <p>Dites moi ce que vous faites et combien vous êtes. Je réponds dans la journée. Le premier échange dure trente minutes, il est gratuit, et vous en repartez avec au moins une idée applicable.</p>
+  <div class="hcta"><a class="btn" href="mailto:contact@celeritas.agency?subject=Rendez-vous">contact@celeritas.agency</a><a class="btn g" href="tel:+33000000000">Appeler</a></div>
+</div></div>
+
+<div class="w"><footer><span>Celeritas · Julian, développeur indépendant à Nice</span><span>Mentions légales · SIREN à compléter</span></footer></div>
+</body></html>
