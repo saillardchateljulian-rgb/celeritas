@@ -244,12 +244,22 @@
  window.I18N = isFR ? {lang:'fr',V:FR_V,MOMENTS:FR_MOMENTS} : {lang:'en'};
  if(isFR)translate();
 
+ /* on restitue la position d'avant la bascule */
+ try{
+  const y=sessionStorage.getItem('scroll');
+  if(y!==null){sessionStorage.removeItem('scroll');
+   if(history.scrollRestoration)history.scrollRestoration='manual';
+   addEventListener('load',()=>requestAnimationFrame(()=>scrollTo(0,+y)));}
+ }catch(err){}
+
  /* la bascule en haut à droite */
  addEventListener('DOMContentLoaded',()=>{
   document.querySelectorAll('[data-lang]').forEach(b=>{
    b.classList.toggle('on',b.dataset.lang===(isFR?'fr':'en'));
    b.addEventListener('click',e=>{e.preventDefault();
     localStorage.setItem('lang',b.dataset.lang);
+    /* on garde la place du lecteur : la page se recharge, elle ne doit pas repartir du haut */
+    try{sessionStorage.setItem('scroll',String(Math.round(scrollY)))}catch(err){}
     const u=new URL(location.href);u.searchParams.set('lang',b.dataset.lang);location.href=u.toString();});
   });
  });

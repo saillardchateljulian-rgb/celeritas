@@ -198,7 +198,7 @@ h1 .b{display:inline-block;animation:wipe .62s var(--ease) .34s both}
 }
 
 /* la scène épinglée : la journée qui continue sans personne */
-.pin{position:relative;height:420vh}
+.pin{position:relative;height:240vh}
 .pin-in{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden}
 .pin .clock{font-family:var(--disp);font-weight:500;font-size:clamp(56px,12vw,140px);letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums}
 .pin .cap{margin-top:22px;font-size:clamp(18px,2.4vw,26px);color:var(--t2);max-width:24ch;transition:opacity .3s var(--ease),transform .3s var(--ease)}
