@@ -354,16 +354,6 @@ header.dark .burger i{background:#fff}
 .card.in .k svg *{stroke-dashoffset:0}
 
 
-/* ── la semaine en quarante heures ── */
-.grid40 .cells{display:grid;grid-template-columns:repeat(20,1fr);gap:7px;max-width:760px}
-.grid40 i{aspect-ratio:1;border-radius:4px;background:var(--hair);display:block;
- transition:background .5s cubic-bezier(.22,1,.36,1),transform .5s cubic-bezier(.22,1,.36,1);transition-delay:var(--d,0ms)}
-.grid40.on i[data-r="1"]{background:var(--acc);transform:scale(.82)}
-.glegend{display:flex;gap:26px;margin-top:22px;flex-wrap:wrap;font-size:13.5px;color:var(--t2)}
-.glegend span{display:flex;align-items:center;gap:9px}
-.glegend em{width:11px;height:11px;border-radius:3px;display:block}
-.c-rep{background:var(--acc)}.c-real{background:var(--hair)}
-@media(max-width:700px){.grid40 .cells{grid-template-columns:repeat(10,1fr);gap:6px}}
 
 /* ── le fil des trois semaines ── */
 .track{position:relative;height:1px;background:var(--hair);margin:0 0 26px}
@@ -449,3 +439,29 @@ header.dark .lang i{color:rgba(255,255,255,.2)}
 .wcap{margin-top:18px;color:var(--t3);font-size:13.5px;text-align:center}
 @media(max-width:700px){.packets text{font-size:12px}.nodes text{font-size:15px}.hub text{font-size:15px}}
 @media(prefers-reduced-motion:reduce){.hub .halo,.hub .ripple.go{animation:none}.packets{display:none}}
+
+/* ── la même semaine, avant et après ── */
+.ba{display:grid;grid-template-columns:1fr 88px 1fr;align-items:end;gap:0}
+.ba .lab{font-size:13px;font-weight:600;color:var(--t2);margin-bottom:12px}
+.ba .lab.on{color:var(--acc)}
+.ba .stack{display:flex;flex-direction:column;gap:2px;height:270px;border-radius:14px;overflow:hidden}
+.ba .seg{flex:var(--f);display:flex;align-items:center;padding:0 18px;font-size:14.5px;font-weight:600;
+ min-height:0;transform:scaleY(0);transform-origin:bottom;transition:transform .7s cubic-bezier(.22,1,.36,1);transition-delay:var(--d,0ms)}
+.ba.on .seg{transform:scaleY(1)}
+.ba .seg span{opacity:0;transition:opacity .4s ease .35s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ba.on .seg span{opacity:1}
+.ba .rep{background:var(--acc);color:#fff}
+.ba .job{background:#F1F2F4;color:var(--t2)}
+.ba .back{background:repeating-linear-gradient(135deg,#EFF5FF,#EFF5FF 7px,#fff 7px,#fff 14px);
+ box-shadow:inset 0 0 0 1px #BFD5FB;color:var(--acc-d,#2563EB)}
+.ba .arrow{display:flex;justify-content:center;padding-bottom:118px;color:var(--acc);opacity:0;transform:translateX(-8px);
+ transition:opacity .5s var(--ease) .5s,transform .5s var(--ease) .5s}
+.ba.on .arrow{opacity:1;transform:none}
+.ba .arrow svg{width:52px;height:16px}
+@media(max-width:760px){
+ .ba{grid-template-columns:1fr;gap:26px}
+ .ba .arrow{padding:0;transform:rotate(90deg) translateX(-8px)}
+ .ba.on .arrow{transform:rotate(90deg)}
+ .ba .stack{height:190px}
+ .ba .seg{font-size:13.5px;padding:0 14px}
+}

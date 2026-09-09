@@ -44,11 +44,21 @@
   "Appointment reminders":"Rappels de rendez-vous","Client records":"Fiches clients","Handover notes":"Notes de passation",
   "Weekly summaries":"Récapitulatifs hebdomadaires","Late payment chasing":"Relance des impayés",
   /* la semaine */
-  "The point":"L'idée","A week is":"Une semaine, c'est","forty hours":"quarante heures","per person.":"par personne.",
-  "A part of it is the same work, over and over.":"Une partie, c'est le même travail, encore et encore.",
-  "Repetitive, and automatable":"Répétitif, donc automatisable","The work you actually sell":"Le travail que vous vendez vraiment",
-  "The share is different in every company. Finding yours is what the first visit is for.":
-   "La proportion est différente dans chaque entreprise. Trouver la vôtre, c'est l'objet de la première visite.",
+  
+  
+  
+  
+  /* la même semaine, avant et après */
+  "The point":"L'idée",
+  "The same week, before and after":"La même semaine, avant et après",
+  "before and after":"avant et après",
+  "The same week,":"La même semaine,",
+  "The difference is what you get back.":"La différence, c'est ce qu'on vous rend.",
+  "Today":"Aujourd'hui","After the first workflow":"Après un premier chantier",
+  "Repetitive work":"Travail répétitif","Your actual job":"Votre métier",
+  "What is left":"Ce qui reste","Given back to your team":"Rendu à votre équipe",
+  "Proportions shown as an example. Yours is measured during the first visit.":
+   "Proportions données en exemple. La vôtre se mesure pendant la première visite.",
   /* déroulé */
   "Three weeks":"Trois semaines","from the first call to something running.":"entre le premier appel et un système qui tourne.",
   "Here is exactly what happens.":"Voici exactement ce qui se passe.",

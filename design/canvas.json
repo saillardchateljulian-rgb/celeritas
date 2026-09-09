@@ -1,0 +1,15 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html",       "x": 0,    "y": 0,   "w": 880, "h": 600, "title": "A · Agenda de la semaine" },
+    { "file": "DirectionB.dc.html", "x": 980,  "y": 0,   "w": 880, "h": 520, "title": "B · La journée découpée" },
+    { "file": "DirectionC.dc.html", "x": 0,    "y": 740, "w": 880, "h": 580, "title": "C · Avant et après" },
+    { "file": "DirectionD.dc.html", "x": 980,  "y": 740, "w": 880, "h": 520, "title": "D · La journée hachée" }
+  ],
+  "annotations": [
+    { "id": "note-a", "x": 0,   "y": -150, "w": 380, "text": "A · Agenda de la semaine\nTout le monde sait lire un agenda. On voit que le répétitif est éparpillé partout, jamais en gros bloc.\nRisque : cinq colonnes, ça fait beaucoup à lire d'un coup." },
+    { "id": "note-b", "x": 980, "y": -150, "w": 380, "text": "B · La journée découpée\nUne seule barre, quatre postes nommés, et le vrai métier en gris.\nLe plus lisible du lot. Risque : ça ressemble à un graphique de consultant." },
+    { "id": "note-c", "x": 0,   "y": 590,  "w": 380, "text": "C · Avant et après\nMontre directement ce que le client achète : la part hachurée qui lui revient.\nLe plus vendeur. Risque : promet un résultat avant la visite." },
+    { "id": "note-d", "x": 980, "y": 590,  "w": 380, "text": "D · La journée hachée\nOnze tranches bleues sur une seule journée. Sert la phrase « ça part par tranches de dix minutes ».\nLe plus honnête, aucune proportion affichée. Risque : plus abstrait." }
+  ],
+  "launch": { "view": "canvas" }
+}

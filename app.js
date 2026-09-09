@@ -206,14 +206,13 @@ mn.addEventListener('click',e=>{if(e.target.tagName==='A'){mn.classList.remove('
  }
 })();
 
-/* la grille de la semaine s'allume au défilement */
+/* la comparaison avant / après se dresse au défilement */
 (function(){
- const g=document.getElementById('g40'); if(!g)return;
- [...g.querySelectorAll('i')].forEach((c,i)=>c.style.setProperty('--d',(i*22)+'ms'));
- if(matchMedia('(prefers-reduced-motion:reduce)').matches){g.classList.add('on');return}
- new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){g.classList.add('on');o.disconnect()}}),{threshold:.3}).observe(g);
- setTimeout(()=>g.classList.add('on'),4200);
- /* les icônes se dessinent */
+ const ba=document.getElementById('ba'); if(!ba)return;
+ [...ba.querySelectorAll('.seg')].forEach((s,i)=>s.style.setProperty('--d',(i%3*110)+'ms'));
+ if(matchMedia('(prefers-reduced-motion:reduce)').matches){ba.classList.add('on');return}
+ new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){ba.classList.add('on');o.disconnect()}}),{threshold:.3}).observe(ba);
+ setTimeout(()=>ba.classList.add('on'),4200);
  document.querySelectorAll('.card').forEach(c=>{
   c.querySelectorAll('.k svg *').forEach(s=>{try{const L=s.getTotalLength?s.getTotalLength():120;s.style.setProperty('--L',Math.ceil(L))}catch(e){}});
  });
