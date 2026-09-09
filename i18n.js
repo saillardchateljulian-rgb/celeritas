@@ -249,7 +249,14 @@
   const y=sessionStorage.getItem('scroll');
   if(y!==null){sessionStorage.removeItem('scroll');
    if(history.scrollRestoration)history.scrollRestoration='manual';
-   addEventListener('load',()=>requestAnimationFrame(()=>scrollTo(0,+y)));}
+   const cible=+y;
+   /* la page grandit encore après le chargement (polices, sections révélées) :
+      on réessaie plusieurs fois jusqu'à tomber juste, puis on lâche. */
+   const viser=()=>{const max=document.documentElement.scrollHeight-innerHeight;
+     scrollTo(0,Math.min(cible,Math.max(0,max)));};
+   const essais=[0,80,200,420,700,1100];
+   addEventListener('load',()=>essais.forEach(ms=>setTimeout(viser,ms)),{once:true});
+   document.addEventListener('DOMContentLoaded',viser,{once:true});}
  }catch(err){}
 
  /* la bascule en haut à droite */
