@@ -49,7 +49,10 @@ function paint(v){
  right.innerHTML=`<div class="draft"><div class="to">${v.right.to}</div>${v.right.p.map(p=>`<p>${p}</p>`).join('')}<p class="type">${v.right.ty}</p><div class="act"><span class="a1">Send</span><span class="a2">Edit</span><span class="a2">Later</span></div></div><p class="note">${window.I18N&&window.I18N.lang==='fr'?"Rien ne part à un client sans votre validation, tant que vous n'en décidez pas autrement.":"Nothing reaches a client without your approval, until you decide otherwise."}</p>`;
 }
 const TB=[...document.querySelectorAll('.tab')];
-function sel(b){ai=TB.indexOf(b);TB.forEach(x=>{x.classList.remove('on');x.setAttribute('aria-selected','false')});b.classList.add('on');b.setAttribute('aria-selected','true');draw(+b.dataset.i);}
+/* un tablist ne prend qu'un arrêt de tabulation : seul l'onglet actif est atteignable,
+   les flèches déplacent la sélection. */
+TB.forEach((b,i)=>b.tabIndex=i===0?0:-1)
+function sel(b){ai=TB.indexOf(b);TB.forEach(x=>{x.classList.remove('on');x.setAttribute('aria-selected','false');x.tabIndex=-1});b.tabIndex=0;b.classList.add('on');b.setAttribute('aria-selected','true');draw(+b.dataset.i);}
 TB.forEach((b,i)=>{b.addEventListener('click',()=>sel(b));
  b.addEventListener('keydown',e=>{if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;e.preventDefault();
   const n=TB[(i+(e.key==='ArrowRight'?1:TB.length-1))%TB.length];n.focus();sel(n);});});

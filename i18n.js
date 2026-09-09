@@ -226,7 +226,7 @@
  ];
 
  const TITLE_FR="Celeritas · le poste que vous n'avez pas les moyens d'embaucher";
- const DESC_FR="Un assistant sur mesure qui traite vos demandes entrantes, relance vos devis, écrit vos comptes rendus et tient votre reporting à jour. Moins cher qu'un mi-temps administratif, et il ne s'arrête jamais.";
+ const DESC_FR="Un assistant qui prend en charge le travail répétitif que votre équipe fait tous les jours. Moins cher qu'un mi-temps, et il ne s'arrête jamais.";
 
  /* choix de la langue : réglage mémorisé, sinon paramètre d'URL, sinon navigateur */
  const url=new URLSearchParams(location.search).get('lang');
