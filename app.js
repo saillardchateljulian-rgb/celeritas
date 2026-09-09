@@ -2,7 +2,7 @@
 
 /* ── bloc 1 ─────────────────────────────────────────────── */
 (function(){
-const V=[
+const V=(window.I18N&&window.I18N.V)||[
 {t:"Tuesday, 8 September · work handled",lh:"Done this morning",ls:"with nobody on it",rh:"What it needs from you",
  rows:[["Incoming enquiry qualified and routed","08:12","Renovation job, budget stated, sent to the right rep","ok","Handled"],
  ["Call note written and filed","09:41","Client record updated, next step scheduled","ok","Handled"],
@@ -103,7 +103,7 @@ mn.addEventListener('click',e=>{if(e.target.tagName==='A'){mn.classList.remove('
 
  /* la scène épinglée : trois moments de la journée */
  const pin=document.getElementById('never');
- const MOMENTS=[
+ const MOMENTS=(window.I18N&&window.I18N.MOMENTS)||[
   'Answer the 19:20 enquiry.',
   'Chase every quote to a yes or a no.',
   'Write the call note before the next call.',

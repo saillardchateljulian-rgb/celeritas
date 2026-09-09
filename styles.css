@@ -416,3 +416,14 @@ header.dark .burger i{background:#fff}
 .field{position:absolute;inset:0}
 .field b{position:absolute;left:50%;top:50%;border-radius:50%;background:#3B82F6;will-change:transform}
 @media(prefers-reduced-motion:reduce){.sky .core{animation:none}}
+
+/* ── bascule de langue ── */
+.lang{display:flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;letter-spacing:.08em;margin-right:4px}
+.lang a{color:var(--t3);transition:color .15s}
+.lang a:hover{color:var(--t2)}
+.lang a.on{color:var(--ink)}
+.lang i{color:var(--line);font-style:normal}
+header.dark .lang a{color:#7A828E}
+header.dark .lang a.on{color:#fff}
+header.dark .lang i{color:rgba(255,255,255,.2)}
+@media(max-width:420px){.lang{display:none}}
