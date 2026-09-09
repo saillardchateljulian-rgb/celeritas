@@ -442,3 +442,9 @@ header.dark .lang i{color:rgba(255,255,255,.2)}
 .skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:12px 18px;border-radius:0 0 10px 0;z-index:90;font-size:14px}
 .skip:focus{left:0}
 .navwrap{display:contents}
+
+/* ── l'appel de la scène noire ── */
+.pincta{display:inline-flex;align-items:center;gap:9px;margin-top:38px;padding:13px 24px;border-radius:999px;
+ background:#fff;color:#0B0C0E;font-size:15px;font-weight:500;transition:transform .16s var(--ease),background .16s}
+.pincta:after{content:"→"}
+.pincta:hover{transform:translateY(-1px);background:#E8EAEE}

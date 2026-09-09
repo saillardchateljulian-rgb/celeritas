@@ -87,6 +87,10 @@
   "The two or three absurd tasks only your company has. It is custom built, so those go in too.":
    "Les deux ou trois tâches absurdes que seule votre entreprise a. C'est du sur mesure, donc elles rentrent aussi.",
   "0 handled today":"0 traité aujourd'hui",
+  "Tell us yours":"Dites-nous la vôtre",
+  "Delivery confirmations":"Confirmations de livraison","Site visit reports":"Comptes rendus de visite",
+  "Holiday planning":"Planning des congés","Subcontractor paperwork":"Papiers des sous-traitants",
+  "Warranty follow ups":"Suivi des garanties",
   /* déroulé */
   "Three weeks":"Trois semaines","from the first call to something running.":"entre le premier appel et un système qui tourne.",
   "Here is exactly what happens.":"Voici exactement ce qui se passe.",
