@@ -350,7 +350,7 @@ mn.addEventListener('click',e=>{if(e.target.tagName==='A'){mn.classList.remove('
 
  let live=[];
  function send(label,wi,after){
-  if(RM)return;
+  if(RM||document.hidden||live.length>8)return;
   const g=chip(label), w=wires[wi], L=LEN[wi];
   live.push({g,w,L,d:0,v:0.30+Math.random()*0.10,after,done:false});
   nodes.find(n=>+n.dataset.w===wi)?.classList.add('blink');
@@ -380,11 +380,15 @@ mn.addEventListener('click',e=>{if(e.target.tagName==='A'){mn.classList.remove('
   live=live.filter(p=>!p.done);
  }
  requestAnimationFrame(frame);
+ document.addEventListener('visibilitychange',()=>{
+  if(document.hidden){live.forEach(p=>p.g.remove());live=[]}
+  else t0=performance.now();
+ });
 
  /* une histoire toutes les 2,6 secondes */
  let k=0;
  function story(){
-  if(!visible||RM)return;
+  if(!visible||RM||document.hidden)return;
   const [label,wi]=IN[k%IN.length];
   const [olabel,owi]=OUT[k%OUT.length];
   k++;
