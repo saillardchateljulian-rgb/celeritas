@@ -61,10 +61,16 @@
    if(stop)return;
    p.classList.add('live'); tok.style.opacity=1;
    const L=p.getTotalLength(), t0=performance.now(), D=620;
-   await new Promise(res=>{(function s(now){
-     const k=Math.min(1,(now-t0)/D), pt=p.getPointAtLength(k*L);
-     tok.style.left=pt.x+'px'; tok.style.top=pt.y+'px';
-     k<1?requestAnimationFrame(s):res();})(t0)});
+   await new Promise(res=>{
+     let fini=false; const fin=()=>{if(!fini){fini=true;res()}};
+     /* filet : si l'animation est suspendue (onglet caché), on n'attend pas indéfiniment */
+     const secours=setTimeout(fin,D+500);
+     (function s(now){
+       const k=Math.min(1,(now-t0)/D), pt=p.getPointAtLength(k*L);
+       tok.style.left=pt.x+'px'; tok.style.top=pt.y+'px';
+       if(k<1&&!fini)requestAnimationFrame(s);else{clearTimeout(secours);fin()}
+     })(performance.now());
+   });
    els[b].classList.add('run');
    await wait(120);
    els[b].classList.add('ok'); els[b].querySelector('.ico').textContent='✓';
