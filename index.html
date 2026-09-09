@@ -10,7 +10,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230F1115'/%3E%3Cg fill='%23fff'%3E%3Crect x='8' y='11' width='16' height='2.4' rx='1.2' opacity='.35'/%3E%3Crect x='8' y='15' width='12' height='2.4' rx='1.2' opacity='.65'/%3E%3Crect x='8' y='19' width='8' height='2.4' rx='1.2'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=ce52c4d4"></head><body>
+<link rel="stylesheet" href="styles.css?v=ede75c13"></head><body>
 
 <div class="sprog"><i id="sp"></i></div>
 <header><div class="w nav">
@@ -108,32 +108,45 @@
     <p style="margin-top:20px;color:var(--t2);font-size:17px;max-width:46ch">There is no Celeritas product we install. It reads your inbox, your quoting software and your sheets where they already are, and writes back into them.</p>
     <p style="margin-top:26px"><a class="btn btn-p" href="#contact">Book a call<span class="ar">&rarr;</span></a></p>
   </div>
-  <div class="wiring">
-    <svg viewBox="0 0 520 340" fill="none" aria-label="How it connects to your existing tools">
-      <g class="wire" stroke="var(--line)" stroke-width="1.5">
-        <path id="w1" d="M92 46 C 200 46, 220 140, 260 170"/>
-        <path id="w2" d="M92 128 C 190 128, 205 155, 260 170"/>
-        <path id="w3" d="M92 212 C 190 212, 205 185, 260 170"/>
-        <path id="w4" d="M92 294 C 200 294, 220 200, 260 170"/>
-        <path id="w5" d="M428 100 C 350 100, 320 140, 260 170"/>
-        <path id="w6" d="M428 240 C 350 240, 320 200, 260 170"/>
+  <div class="wiring" id="wiring">
+    <svg viewBox="0 0 560 360" fill="none" aria-label="How it connects to your existing tools">
+      <defs>
+        <linearGradient id="gIn" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="var(--line)"/><stop offset="1" stop-color="var(--acc)" stop-opacity=".35"/>
+        </linearGradient>
+        <linearGradient id="gOut" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="var(--acc)" stop-opacity=".35"/><stop offset="1" stop-color="var(--line)"/>
+        </linearGradient>
+        <radialGradient id="gHub"><stop offset="0" stop-color="#3B82F6" stop-opacity=".22"/><stop offset="1" stop-color="#3B82F6" stop-opacity="0"/></radialGradient>
+      </defs>
+
+      <g class="wires">
+        <path class="wire in"  id="p0" d="M118 52  C 210 52, 214 150, 250 172"/>
+        <path class="wire in"  id="p1" d="M118 132 C 200 132, 208 160, 250 176"/>
+        <path class="wire in"  id="p2" d="M118 212 C 200 212, 208 196, 250 184"/>
+        <path class="wire in"  id="p3" d="M118 292 C 210 292, 214 210, 250 188"/>
+        <path class="wire out" id="p4" d="M310 172 C 360 150, 372 108, 442 108"/>
+        <path class="wire out" id="p5" d="M310 188 C 360 210, 372 252, 442 252"/>
       </g>
-      <g class="pulse" stroke="var(--acc)" stroke-width="1.5" stroke-linecap="round">
-        <use href="#w1"/><use href="#w2"/><use href="#w3"/><use href="#w4"/><use href="#w5"/><use href="#w6"/>
-      </g>
-      <g class="node">
-        <rect x="8" y="30" width="84" height="32" rx="9"/><text x="50" y="50">Inbox</text>
-        <rect x="8" y="112" width="84" height="32" rx="9"/><text x="50" y="132">Quotes</text>
-        <rect x="8" y="196" width="84" height="32" rx="9"/><text x="50" y="216">Sheets</text>
-        <rect x="8" y="278" width="84" height="32" rx="9"/><text x="50" y="298">Phone</text>
-        <rect x="428" y="84" width="84" height="32" rx="9"/><text x="470" y="104">CRM</text>
-        <rect x="428" y="224" width="84" height="32" rx="9"/><text x="470" y="244">Accounts</text>
-      </g>
+
       <g class="hub">
-        <circle cx="260" cy="170" r="52" class="halo"/>
-        <rect x="206" y="150" width="108" height="40" rx="12"/>
-        <text x="260" y="174">Celeritas</text>
+        <circle class="halo" cx="280" cy="180" r="66" fill="url(#gHub)"/>
+        <circle class="ripple r1" cx="280" cy="180" r="34"/>
+        <circle class="ripple r2" cx="280" cy="180" r="34"/>
+        <rect x="222" y="160" width="116" height="40" rx="13"/>
+        <text x="280" y="185">Celeritas</text>
       </g>
+
+      <g class="nodes">
+        <g class="node" data-w="0"><rect x="10" y="34" width="108" height="36" rx="11"/><text x="64" y="57">Inbox</text><circle class="led" cx="103" cy="46" r="2.6"/></g>
+        <g class="node" data-w="1"><rect x="10" y="114" width="108" height="36" rx="11"/><text x="64" y="137">Quotes</text><circle class="led" cx="103" cy="126" r="2.6"/></g>
+        <g class="node" data-w="2"><rect x="10" y="194" width="108" height="36" rx="11"/><text x="64" y="217">Sheets</text><circle class="led" cx="103" cy="206" r="2.6"/></g>
+        <g class="node" data-w="3"><rect x="10" y="274" width="108" height="36" rx="11"/><text x="64" y="297">Phone</text><circle class="led" cx="103" cy="286" r="2.6"/></g>
+        <g class="node" data-w="4"><rect x="442" y="90" width="108" height="36" rx="11"/><text x="496" y="113">CRM</text><circle class="led" cx="457" cy="102" r="2.6"/></g>
+        <g class="node" data-w="5"><rect x="442" y="234" width="108" height="36" rx="11"/><text x="496" y="257">Accounts</text><circle class="led" cx="457" cy="246" r="2.6"/></g>
+      </g>
+
+      <g class="packets"></g>
     </svg>
     <p class="wcap">It reads and writes where your work already lives. Nothing to migrate.</p>
   </div>
@@ -200,8 +213,8 @@
   <span>Legal notice · company number to be added</span>
 </footer></div>
 
-<script src="i18n.js?v=ce52c4d4" defer></script>
-<script src="app.js?v=ce52c4d4" defer></script>
+<script src="i18n.js?v=ede75c13" defer></script>
+<script src="app.js?v=ede75c13" defer></script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ProfessionalService","name":"Celeritas","description":"Custom built assistants that take over repetitive administrative work for companies of ten to sixty people.","areaServed":"FR","address":{"@type":"PostalAddress","addressLocality":"Nice","addressCountry":"FR"},"email":"contact@celeritas.agency","numberOfEmployees":{"@type":"QuantitativeValue","minValue":2}}
 </script>

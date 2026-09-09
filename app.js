@@ -315,3 +315,90 @@ mn.addEventListener('click',e=>{if(e.target.tagName==='A'){mn.classList.remove('
  setTimeout(()=>{targets.forEach(show);const st=document.querySelector('.steps');if(st)st.classList.add('in')},3500);
 })();
 })();
+
+
+/* ══ le schéma de branchement, vivant ══════════════════════════════════════
+   Des paquets étiquetés parcourent réellement les câbles. Quand l'un arrive
+   au noyau, celui-ci émet une onde et renvoie un paquet de sortie vers le
+   CRM ou la compta. Survol d'un nœud : sa route s'isole.                   */
+(function(){
+ const box=document.getElementById('wiring'); if(!box)return;
+ const svg=box.querySelector('svg');
+ const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+ const wires=[...svg.querySelectorAll('.wire')];
+ const nodes=[...svg.querySelectorAll('.node')];
+ const layer=svg.querySelector('.packets');
+ const hub=svg.querySelector('.hub');
+ const ripples=[...svg.querySelectorAll('.ripple')];
+ const LEN=wires.map(w=>w.getTotalLength());
+
+ const IN=window.I18N&&window.I18N.lang==='fr'
+  ? [["Demande de devis",0],["Devis envoyé",1],["Ligne ajoutée",2],["Appel manqué 19:20",3]]
+  : [["Quote request",0],["Quote sent",1],["Row added",2],["Missed call 19:20",3]];
+ const OUT=window.I18N&&window.I18N.lang==='fr'
+  ? [["Fiche créée",4],["Relance programmée",4],["Écriture passée",5],["Rappel calé",4]]
+  : [["Record created",4],["Follow up set",4],["Entry posted",5],["Callback booked",4]];
+
+ function chip(label){
+  const g=document.createElementNS('http://www.w3.org/2000/svg','g');
+  const w=Math.max(52,label.length*5.9+22);
+  g.innerHTML=`<rect x="${-w/2}" y="-11" width="${w}" height="22" rx="8"/>`
+   +`<circle class="dot" cx="${-w/2+11}" cy="0" r="2.6"/>`
+   +`<text x="${5}" y="3.6">${label}</text>`;
+  layer.appendChild(g); return g;
+ }
+
+ let live=[];
+ function send(label,wi,after){
+  if(RM)return;
+  const g=chip(label), w=wires[wi], L=LEN[wi];
+  live.push({g,w,L,d:0,v:0.30+Math.random()*0.10,after,done:false});
+  nodes.find(n=>+n.dataset.w===wi)?.classList.add('blink');
+  setTimeout(()=>nodes.forEach(n=>n.classList.remove('blink')),820);
+ }
+ function beat(){
+  hub.classList.add('beat'); setTimeout(()=>hub.classList.remove('beat'),240);
+  const r=ripples[Math.random()<0.5?0:1];
+  r.classList.remove('go'); void r.getBoundingClientRect(); r.classList.add('go');
+ }
+
+ let t0=performance.now(), visible=false;
+ new IntersectionObserver(es=>es.forEach(e=>{visible=e.isIntersecting;if(visible)t0=performance.now()}),{threshold:.25}).observe(box);
+
+ function frame(now){
+  requestAnimationFrame(frame);
+  const dt=Math.min(0.05,(now-t0)/1000); t0=now;
+  if(!visible||RM)return;
+  for(const p of live){
+   p.d+=p.v*dt;
+   if(p.d>=1){ if(!p.done){p.done=true; p.g.remove(); if(p.after)p.after();} continue }
+   const pt=p.w.getPointAtLength(p.d*p.L);
+   const fade=p.d<0.12?p.d/0.12:(p.d>0.86?(1-p.d)/0.14:1);
+   p.g.setAttribute('transform',`translate(${pt.x.toFixed(1)},${pt.y.toFixed(1)})`);
+   p.g.style.opacity=fade.toFixed(2);
+  }
+  live=live.filter(p=>!p.done);
+ }
+ requestAnimationFrame(frame);
+
+ /* une histoire toutes les 2,6 secondes */
+ let k=0;
+ function story(){
+  if(!visible||RM)return;
+  const [label,wi]=IN[k%IN.length];
+  const [olabel,owi]=OUT[k%OUT.length];
+  k++;
+  send(label,wi,()=>{ beat(); setTimeout(()=>send(olabel,owi),140); });
+ }
+ setInterval(story,2600); setTimeout(story,600);
+
+ /* survol : la route s'isole */
+ nodes.forEach(n=>{
+  const wi=+n.dataset.w;
+  const enter=()=>{box.classList.add('dim');n.classList.add('hot');wires[wi].classList.add('hot');
+   if(!RM){const lbl=(wi<4?IN.find(x=>x[1]===wi):OUT.find(x=>x[1]===wi));if(lbl)send(lbl[0],wi,wi<4?beat:null)}};
+  const leave=()=>{box.classList.remove('dim');n.classList.remove('hot');wires[wi].classList.remove('hot')};
+  n.addEventListener('pointerenter',enter);
+  n.addEventListener('pointerleave',leave);
+ });
+})();

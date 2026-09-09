@@ -353,23 +353,6 @@ header.dark .burger i{background:#fff}
 .card .k svg *{stroke-dasharray:var(--L,120);stroke-dashoffset:var(--L,120);transition:stroke-dashoffset .85s cubic-bezier(.22,1,.36,1)}
 .card.in .k svg *{stroke-dashoffset:0}
 
-/* ── schéma de branchement ── */
-.wiring svg{width:100%;height:auto;overflow:visible}
-.wiring .node rect{fill:#fff;stroke:var(--line);stroke-width:1.5}
-.wiring .node text{font-family:var(--sans);font-size:12.5px;font-weight:500;fill:var(--t2);text-anchor:middle}
-.wiring .hub rect{fill:var(--ink)}
-.wiring .hub text{font-family:var(--sans);font-size:13px;font-weight:600;fill:#fff;text-anchor:middle}
-.wiring .hub .halo{fill:rgba(59,130,246,.10);animation:halo 4.5s ease-in-out infinite}
-@keyframes halo{0%,100%{r:52;opacity:.5}50%{r:60;opacity:.9}}
-.wiring .pulse use{stroke-dasharray:16 240;stroke-dashoffset:256;animation:travel 3.4s linear infinite}
-.wiring .pulse use:nth-child(2){animation-delay:.55s}
-.wiring .pulse use:nth-child(3){animation-delay:1.1s}
-.wiring .pulse use:nth-child(4){animation-delay:1.65s}
-.wiring .pulse use:nth-child(5){animation-delay:2.2s;animation-direction:reverse}
-.wiring .pulse use:nth-child(6){animation-delay:2.75s;animation-direction:reverse}
-@keyframes travel{to{stroke-dashoffset:0}}
-.wcap{margin-top:18px;color:var(--t3);font-size:13.5px;text-align:center}
-@media(prefers-reduced-motion:reduce){.wiring .pulse use,.wiring .hub .halo{animation:none}.wiring .pulse{opacity:.35}}
 
 /* ── la semaine en quarante heures ── */
 .grid40 .cells{display:grid;grid-template-columns:repeat(20,1fr);gap:7px;max-width:760px}
@@ -427,3 +410,42 @@ header.dark .lang a{color:#7A828E}
 header.dark .lang a.on{color:#fff}
 header.dark .lang i{color:rgba(255,255,255,.2)}
 @media(max-width:420px){.lang{display:none}}
+
+/* ── schéma de branchement, vivant ── */
+.wiring{position:relative}
+.wiring svg{width:100%;height:auto;overflow:visible;display:block}
+.wire{stroke-width:1.6;fill:none;transition:stroke-width .25s var(--ease),opacity .25s var(--ease)}
+.wire.in{stroke:url(#gIn)}
+.wire.out{stroke:url(#gOut)}
+.wiring.dim .wire{opacity:.22}
+.wiring .wire.hot{opacity:1;stroke-width:2.6;stroke:var(--acc)}
+
+.nodes .node{cursor:default}
+.nodes rect{fill:#fff;stroke:var(--line);stroke-width:1.5;transition:stroke .25s var(--ease),filter .25s var(--ease),transform .3s var(--ease)}
+.nodes text{font-family:var(--sans);font-size:13px;font-weight:500;fill:var(--t2);text-anchor:middle;transition:fill .25s var(--ease)}
+.nodes .led{fill:var(--acc);opacity:.30;transition:opacity .3s}
+.nodes .node.hot rect{stroke:var(--acc);filter:drop-shadow(0 6px 18px rgba(59,130,246,.24))}
+.nodes .node.hot text{fill:var(--ink)}
+.nodes .node.hot .led{opacity:1}
+.nodes .node.blink .led{animation:led .8s ease-out}
+@keyframes led{0%{opacity:1;r:2.6}50%{opacity:1;r:5}100%{opacity:.3;r:2.6}}
+.wiring.dim .nodes .node:not(.hot) rect{opacity:.4}
+.wiring.dim .nodes .node:not(.hot) text{opacity:.4}
+
+.hub rect{fill:var(--ink);transition:transform .25s var(--ease)}
+.hub text{font-family:var(--sans);font-size:13.5px;font-weight:600;fill:#fff;text-anchor:middle}
+.hub .halo{animation:hubHalo 5s ease-in-out infinite;transform-origin:280px 180px}
+@keyframes hubHalo{0%,100%{transform:scale(1);opacity:.75}50%{transform:scale(1.12);opacity:1}}
+.hub .ripple{fill:none;stroke:var(--acc);stroke-width:1.4;opacity:0;transform-origin:280px 180px}
+.hub .ripple.go{animation:hubRipple .9s cubic-bezier(.22,1,.36,1)}
+@keyframes hubRipple{0%{opacity:.55;transform:scale(.72)}100%{opacity:0;transform:scale(2.1)}}
+.hub.beat rect{transform:scale(1.06);transform-origin:280px 180px}
+
+.packets g{opacity:0}
+.packets rect{fill:#fff;stroke:var(--acc);stroke-width:1.2;filter:drop-shadow(0 4px 12px rgba(16,24,40,.14))}
+.packets text{font-family:var(--sans);font-size:10.5px;font-weight:600;fill:var(--ink);text-anchor:middle}
+.packets .dot{fill:var(--acc);stroke:none}
+
+.wcap{margin-top:18px;color:var(--t3);font-size:13.5px;text-align:center}
+@media(max-width:700px){.packets text{font-size:12px}.nodes text{font-size:15px}.hub text{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.hub .halo,.hub .ripple.go{animation:none}.packets{display:none}}
