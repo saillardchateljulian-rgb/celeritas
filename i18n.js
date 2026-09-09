@@ -16,6 +16,11 @@
   "Today":"Aujourd'hui","Incoming enquiries":"Demandes entrantes","Quote follow up":"Suivi des devis",
   "Call notes":"Comptes rendus","Reporting":"Reporting","handled today":"traités aujourd'hui","· example":"· exemple",
   "Yours uses your fields, your timing and your wording.":"Le vôtre reprend vos champs, vos délais et votre façon d'écrire.",
+  /* valeurs initiales du HTML, avant que la démo ne se dessine */
+  "Tuesday, 8 September · work handled":"Mardi 8 septembre · travail traité",
+  "Done this morning":"Fait ce matin","with nobody on it":"sans que personne s'en occupe",
+  "What it needs from you":"Ce qu'il vous demande","one approval":"une validation",
+  "Answer the 19:20 enquiry.":"Répondre à la demande de 19h20.",
   /* capacités */
   "What it takes on":"Ce qu'il prend en charge","The work":"Le travail que","nobody has time":"personne n'a le temps",
   "to do properly.":"de faire correctement.",
